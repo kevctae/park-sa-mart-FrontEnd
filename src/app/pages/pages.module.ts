@@ -4,9 +4,11 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AccountComponent } from './account/account.component';
+import { NavbarComponent } from '../core/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
+    NavbarComponent,
     HomeComponent,
     WalletComponent,
     AccountComponent
