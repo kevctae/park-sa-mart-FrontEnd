@@ -12,4 +12,4 @@ fi
 }
 
 docker build -t parksamart:latest .
-docker run -d -p 81:5000 parksamart:latest
+docker run -d -p 80:80 parksamart:latest
