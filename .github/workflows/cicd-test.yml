@@ -2,8 +2,8 @@ name: Angular Application Testing
 
 on:
   push:
-    branches: [ master ]
-#
+    branches: [ main ]
+
 jobs:
   build:
 
