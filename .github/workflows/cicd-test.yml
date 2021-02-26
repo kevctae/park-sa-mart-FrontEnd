@@ -3,7 +3,7 @@ name: Angular Application Testing
 on:
   push:
     branches: [ master ]
-
+#
 jobs:
   build:
 
