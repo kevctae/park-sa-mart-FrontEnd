@@ -1,0 +1,35 @@
+name: Flask Application Deployment
+
+on: 
+  push:
+    branches:
+      - master
+      
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+      
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: rsync Deployment
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzr --delete
+          path: .
+          remote_path: ${{ secrets.DEPLOY_WEB_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_port: ${{ secrets.DEPLOY_PORT }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+        
+      - name: Build Deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.DEPLOY_PORT }}
+          script: |
+            cd /var/www/parksamart.ga/html
+            bash deploy_script.sh
