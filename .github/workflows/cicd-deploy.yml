@@ -1,4 +1,4 @@
-name: Flask Application Deployment
+name: Angular Application Deployment
 
 on: 
   push:
