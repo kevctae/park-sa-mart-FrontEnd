@@ -1,0 +1,23 @@
+name: Angular Application Testing
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+    
+    env:
+     IMAGE_NAME: parksamart
+     IMAGE_TAG: latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Docker build
+      run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
+      
+    - name: Test
+      run: docker run -d -p 80:80 $IMAGE_NAME:$IMAGE_TAG
