@@ -1,7 +1,7 @@
 name: Angular Application Testing
 
 on:
-  push:
+  pull_request:
     branches: [ main ]
 
 jobs:
