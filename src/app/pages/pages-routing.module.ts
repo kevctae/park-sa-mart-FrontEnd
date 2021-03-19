@@ -11,6 +11,10 @@ const routes: Routes = [
         component: NavbarComponent,
         children: [
             { 
+                path: '', 
+                redirectTo: 'home' 
+            },
+            { 
                 path: 'home', 
                 component: HomeComponent
             },
