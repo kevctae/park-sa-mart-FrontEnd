@@ -12,8 +12,12 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
+      { 
+        path: '', 
+        redirectTo: 'auth' 
+      },
       {
-        path: '',
+        path: 'auth',
         component: AuthComponent,
       }
     ])
