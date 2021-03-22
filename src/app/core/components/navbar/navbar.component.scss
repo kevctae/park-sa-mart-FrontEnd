@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 #footer {
     /* Navigator */
 
@@ -26,7 +28,7 @@
 
     /* Global/07. Light */
 
-    background: #F8F9FA;
+    background: theme-color("light");
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -52,7 +54,7 @@
 
     /* Global/01. Primary */
 
-    background: #11212E;
+    background: theme-color("primary");
     border-radius: 40px;
 }
 
@@ -69,6 +71,7 @@
 #wallet-button {
     /* Frame 1 */
 
+
     /* Auto Layout */
 
     display: flex;
@@ -80,7 +83,7 @@
     width: 68px;
     height: 56px;
     left: 38px;
-    top: 46px;
+    top: calc(50% - 56px/2 + 7.5px);
 }
 
 #wallet-box {
@@ -129,6 +132,7 @@
 #account-button {
     /* Frame 2 */
 
+
     /* Auto Layout */
 
     display: flex;
@@ -140,7 +144,7 @@
     width: 68px;
     height: 58px;
     right: 38px;
-    top: 44px;
+    top: calc(50% - 58px/2 + 8.5px);
 }
 
 #account-box {
