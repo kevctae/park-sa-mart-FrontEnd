@@ -218,6 +218,176 @@
     margin: 12px 0px;
 }
 
+#info-floor-label {
+    /* You parked on: */
+
+
+    position: static;
+    width: 109px;
+    height: 20px;
+    left: 20px;
+    top: 116px;
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+
+    /* Text/01. Body */
+
+    color: theme-color("body");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+#info-floor {
+    /* 5th */
+
+
+    position: static;
+    width: 330px;
+    height: 106px;
+    left: 20px;
+    top: 148px;
+
+    /* Display/Display 2 */
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 88px;
+    line-height: 106px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Text/01. Body */
+
+    color: theme-color("body");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#info-floor-text {
+    /* Floor */
+
+
+    position: static;
+    width: 330px;
+    height: 24px;
+    left: 20px;
+    top: 266px;
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: theme-color("body");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 4;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#info-fee {
+    /* Links */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 330px;
+    height: 24px;
+    left: 20px;
+    top: 302px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 5;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 12px 0px;
+}
+
+#info-fee-amount {
+        /* Total: 135 Baht */
+
+
+    position: static;
+    width: 253px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* Global/02. Secondary */
+
+    color: theme-color("muted");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+}
+
+#info-fee-pay {
+    /* Pay now */
+
+
+    position: static;
+    width: 70px;
+    height: 24px;
+    left: 273px;
+    top: 0px;
+
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+
+    /* Text/02. Muted */
+
+    color: theme-color("muted");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+}
+
 @media only screen and (max-width: 411px) {
     #car-box, #info-box {
         width: calc(100vw - 40px);
@@ -228,7 +398,11 @@
         width: calc(100vw - 40px);
     }
     
-    #info-time {
+    #info-time, #info-floor, #info-floor-text, #info-fee {
         width: calc(100vw - 80px);
+    }
+    
+    #info-fee-amount {
+        width: calc(100vw - 150px);
     }
 }
