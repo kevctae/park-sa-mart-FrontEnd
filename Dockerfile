@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json /app
 RUN npm install
 COPY . /app
-RUN npm run build --prod
+RUN npm run build:ssr --prod
 
 FROM nginx:1.18.0
 COPY --from=build-step /app/dist/park-sa-mart-FrontEnd /usr/share/nginx/html
