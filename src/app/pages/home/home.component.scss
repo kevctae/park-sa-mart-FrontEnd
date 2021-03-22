@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 #profile-box {
     /* Profile */
 
@@ -17,7 +19,7 @@
     top: 20px;
 }
 
-#profile-icon {
+.profile-icon {
     /* Ellipse 1 */
 
 
@@ -34,9 +36,7 @@
     flex: none;
     order: 0;
     flex-grow: 0;
-}
 
-.profile-icon {
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -51,14 +51,6 @@
     height: 24px;
     left: calc(50% - 177px/2 + 23px);
     top: calc(50% - 24px/2);
-
-    /* Heading/H5 */
-
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
 
     /* identical to box height, or 120% */
 
@@ -85,7 +77,7 @@
     top: calc(50% - 205px/2 - 233px);
 }
 
-#car-thumbnail {
+.car-thumbnail {
     /* Car Thumbnail */
 
 
@@ -94,10 +86,149 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
+
+    border-radius: 8px;
+    height: 205px;
+    width: 371px;
 }
 
-.car-thumbnail {
-    border-radius: 8px;
+#info-box {
+    /* Parking Info */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+
+    position: absolute;
     width: 371px;
-    height: 205px;
+    height: 351px;
+    left: calc(50% - 371px/2);
+    top: calc(50% - 351px/2 + 65px);
+
+    /* Global/07. Light */
+
+    background: theme-color("light");
+    mix-blend-mode: lighten;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+#info-time-label {
+    /* Title */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 149px;
+    height: 24px;
+    left: 20px;
+    top: 20px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#info-time-label-icon {
+    /* Icons/Clock */
+
+
+    position: static;
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#info-time-label-text {
+    /* Time Entered */
+
+
+    position: static;
+    width: 120px;
+    height: 24px;
+    left: 34px;
+    top: 0px;
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+
+    /* Global/08. Dark */
+
+    color: theme-color("body");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+#info-time {
+    /* 08:58:46 */
+
+
+    position: static;
+    width: 330px;
+    height: 48px;
+    left: 20px;
+    top: 56px;
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Text/01. Body */
+
+    color: theme-color("body");
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 12px 0px;
+}
+
+@media only screen and (max-width: 411px) {
+    #car-box, #info-box {
+        width: calc(100vw - 40px);
+        left: 20px;
+    }
+
+    .car-thumbnail {
+        width: calc(100vw - 40px);
+    }
+    
+    #info-time {
+        width: calc(100vw - 80px);
+    }
 }
