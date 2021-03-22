@@ -8,3 +8,4 @@ RUN npm run build --prod
 
 FROM nginx:1.18.0
 COPY --from=build-step /app/dist/park-sa-mart-FrontEnd /usr/share/nginx/html
+COPY --from=build-stage /nginx-custom.conf /etc/nginx/conf.d/default.conf
