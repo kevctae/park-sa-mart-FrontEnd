@@ -7,13 +7,15 @@ import { Meta } from '@angular/platform-browser';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'park-sa-mart-FrontEnd';
   
   constructor(
     private meta: Meta,
     @Inject(DOCUMENT) private dom: any
-  ) {
+  ) { }
+
+  ngOnInit() {
     this.meta.addTags([
       { name: 'apple-mobile-web-app-title', content: 'PARK SA MART' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
