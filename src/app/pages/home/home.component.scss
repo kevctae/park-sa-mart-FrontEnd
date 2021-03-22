@@ -1,0 +1,103 @@
+#profile-box {
+    /* Profile */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 223px;
+    height: 36px;
+    left: 20px;
+    top: 20px;
+}
+
+#profile-icon {
+    /* Ellipse 1 */
+
+
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.profile-icon {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+#profile-text {
+    /* Good Morning, Brian */
+
+
+    position: absolute;
+    width: calc(100vw - 86px);
+    height: 24px;
+    left: calc(50% - 177px/2 + 23px);
+    top: calc(50% - 24px/2);
+
+    /* Heading/H5 */
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* identical to box height, or 120% */
+
+    /* Global/07. Light */
+
+    color: #F8F9FA;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#car-box {
+    /* Car Thumbnail */
+
+
+    position: absolute;
+    width: 371px;
+    height: 205px;
+    left: calc(50% - 371px/2);
+    top: calc(50% - 205px/2 - 233px);
+}
+
+#car-thumbnail {
+    /* Car Thumbnail */
+
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.car-thumbnail {
+    border-radius: 8px;
+    width: 371px;
+    height: 205px;
+}
