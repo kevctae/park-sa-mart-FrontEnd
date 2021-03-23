@@ -43,4 +43,8 @@ export class AuthComponent implements OnInit {
   goToGuest() {
     this.page = Pages.guest;
   }
+
+  signIn() {
+
+  }
 }
