@@ -96,3 +96,556 @@
     flex-grow: 0;
     margin: 20px 0px;
 }
+#rectangle {
+    /* Background */
+
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 229px;
+    bottom: 0px;
+
+    /* Global/07. Light */
+
+    background: #F8F9FA;
+    }
+
+#mid {
+    /* information */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 371.03px;
+    height: 301px;
+    left: calc(50% - 371.03px/2 + 0.02px);
+    top: 249px;
+}
+
+#email {
+    /* Frame 48 */
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 371.03px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+
+}
+#email-layout {
+    /* Frame 15 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 347.03px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 0px;
+}
+#email-text {
+    /* E-mail Address */
+
+
+    position: static;
+    width: 150px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+
+    /* identical to box height, or 120% */
+
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#email-brian {
+    /* brian.m@chula.ac.th */
+
+
+    position: static;
+    width: 347.03px;
+    height: 24px;
+    left: 0px;
+    top: 24px;
+
+    /* identical to box height, or 150% */
+
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#edit-icon {
+    /* Icons/Pencil */
+
+
+    position: static;
+    left: 93.53%;
+    right: 0%;
+    top: 25%;
+    bottom: 25%;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+#Own {
+    /* Cars Owned */
+
+
+    position: static;
+    width: 108px;
+    height: 24px;
+    left: 0px;
+    top: 68px;
+
+    /* Heading/H5 */
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+#first-Owned {
+    /* Frame 17 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 371.03px;
+    height: 40px;
+    left: 0px;
+    top: 112px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+#first-layout {
+    /* Frame 16 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 371.03px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+#first-license {
+   /* 1ขอ 1111 */
+
+
+    position: static;
+    width: 80px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+    /* Heading/H6 */
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+#first-brand {
+    position: static;
+    width: 48px;
+    height: 20px;
+    left: 160px;
+    top: 0px;
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+#first-model {
+    /* Almera */
+
+
+    position: static;
+    width: 50px;
+    height: 20px;
+    left: 288px;
+    top: 0px;
+
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+#first-line {
+    /* Line 10 */
+
+
+    position: static;
+    width: 371.03px;
+    height: 0px;
+    left: 0px;
+    top: 40px;
+
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+#second-owned {
+    /* Frame 49 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 371.03px;
+    height: 40px;
+    left: 0px;
+    top: 172px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+#second-layout {
+    /* Frame 16 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 371.03px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+#second-license {
+    /* 1ขอ 1112 */
+
+
+    position: static;
+    width: 80px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+ 
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+#second-brand {
+    /* Honda */
+
+
+    position: static;
+    width: 47px;
+    height: 20px;
+    left: 160px;
+    top: 0px;
+
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+#second-model {
+    /* City */
+
+
+    position: static;
+    width: 28px;
+    height: 20px;
+    left: 287px;
+    top: 0px;
+
+  
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+#second-line {
+    /* Line 10 */
+
+
+    position: static;
+    width: 371.03px;
+    height: 0px;
+    left: 0px;
+    top: 40px;
+
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+#edit {
+    /* Edit Car */
+
+
+    position: static;
+    width: 371px;
+    height: 19px;
+    left: 0px;
+    top: 232px;
+
+  
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: rgba(0, 0, 0, 0.6);
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+#Sign-Out {
+    /* Sign Out */
+
+
+    position: static;
+    width: 371.03px;
+    height: 150px;
+    left: calc(50% - 371.03px/2);
+    top: calc(50% - 150px/2 + 195.5px);
+
+
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 5;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+
