@@ -1,10 +1,23 @@
-.container-fluid {
+#bgImg {
+  /* backgroundImage */
+
+
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
   background: url(https://images.pexels.com/photos/103601/pexels-photo-103601.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-size: cover;
 }
 
 #wrapper {
-  position: absolute;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
   width: 100vw;
   height: 100vh;
   background: rgba(5, 5, 5, 0.4);
