@@ -1,20 +1,30 @@
-<div class="row justify-content-center" style="min-height: 50vh;">
-    <div class="col-auto align-self-center">
-        <h1 class="display-4 text-light text-center">
-            PARK
-        </h1>
-        <h1 class="text-light text-center">
-            SA MART
-        </h1>
-    </div>
-</div>
+<ng-template [ngIf]="this.page == Pages.landingPage">
+    <ng-template [ngTemplateOutlet]="landingPage"></ng-template>
+</ng-template>
 
-<div class="row justify-content-center" style="min-height: 50vh;">
-    <div class="col-8 align-self-center">
-        <div class="row justify-content-center" style="--min-height: 0;">
-            <button class="btn btn-primary btn-lg btn-block">Pay as Guest</button>
-            <button class="btn btn-secondary btn-lg btn-block">Log In</button>
-            <p class="text-light" style="margin-top: 8px;"><u>Create an account</u></p>
+<ng-template [ngIf]="this.page == Pages.landingPage">
+    <ng-template [ngTemplateOutlet]="landingPage"></ng-template>
+</ng-template>
+    
+<ng-template #landingPage>
+    <div class="row justify-content-center" style="min-height: 50vh;">
+        <div class="col-auto align-self-center">
+            <h1 class="display-4 text-light text-center">
+                PARK
+            </h1>
+            <h1 class="text-light text-center">
+                SA MART
+            </h1>
         </div>
     </div>
-</div>
+    
+    <div class="row justify-content-center" style="min-height: 50vh;">
+        <div class="col-8 align-self-center">
+            <div class="row justify-content-center" style="--min-height: 0;">
+                <button class="btn btn-primary btn-lg btn-block" (click)="goToGuest()">Pay as Guest</button>
+                <button class="btn btn-secondary btn-lg btn-block" (click)="goToSignIn()">Sign In</button>
+                <p class="text-light" style="margin-top: 8px;" (click)="goToSignUp()"><u>Create an account</u></p>
+            </div>
+        </div>
+    </div>
+</ng-template>
