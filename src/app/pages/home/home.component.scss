@@ -74,7 +74,9 @@
     width: 371px;
     height: 205px;
     left: calc(50% - 371px/2);
-    top: calc(50% - 205px/2 - 233px);
+    top: 76px;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .car-thumbnail {
@@ -82,14 +84,13 @@
 
 
     position: absolute;
-    left: 0%;
+    left: -134.5px;
     right: 0%;
-    top: 0%;
+    top: -76.5px;
     bottom: 0%;
 
-    border-radius: 8px;
-    height: 205px;
-    width: 371px;
+    display: block;
+    
 }
 
 #info-box {
@@ -107,7 +108,7 @@
     width: 371px;
     height: 351px;
     left: calc(50% - 371px/2);
-    top: calc(50% - 351px/2 + 65px);
+    top: 301px;
 
     /* Global/07. Light */
 
@@ -397,7 +398,7 @@
     }
 
     .car-thumbnail {
-        width: calc(100vw - 40px);
+        left: calc(-1 * (320px - (100vw - 40px) / 2));
     }
     
     #info-time, #info-floor, #info-floor-text, #info-fee {
@@ -407,4 +408,23 @@
     #info-fee-amount {
         width: calc(100vw - 150px);
     }
+}
+
+#footer {
+    /* Parking Info */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    width: 100vw;
+    height: 133px;
+    top: 672px;
+    left: 0%;
+
+    /* Global/07. Light */
 }
