@@ -1,4 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+      url('./assets/fonts/SFProDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SFProDisplay-RegularItalic.woff2') format('woff2'),
+      url('./assets/fonts/SFProDisplay-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SFProDisplay-Medium.woff2') format('woff2'),
+      url('./assets/fonts/SFProDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SFProDisplay-Light.woff2') format('woff2'),
+      url('./assets/fonts/SFProDisplay-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SFProDisplay-Bold.woff2') format('woff2'),
+      url('./assets/fonts/SFProDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+      url('./assets/fonts/SFProDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 $theme-colors: (
   "primary": #11212e,
