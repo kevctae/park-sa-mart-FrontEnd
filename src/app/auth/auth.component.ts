@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthResponseData, AuthService } from './auth.service';
 
 enum Pages {
   landingPage,
@@ -14,12 +17,12 @@ enum Pages {
 })
 export class AuthComponent implements OnInit {
   page: Pages = Pages.landingPage;
+  isLoading = false;
+  error: string = null;
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
-    console.log(this.page == Pages.landingPage);
-  }
+  ngOnInit(): void { }
 
   public get Pages() {
     return Pages; 
@@ -46,6 +49,32 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return;
+    }
 
+    switch (this.page) {
+      case Pages.signIn:
+        this.signIn(form.value.email, form.value.password)
+        break;
+    }
+
+    form.reset();
+  }
+
+  private signIn(email: string, password: string) {
+    let authObs: Observable<AuthResponseData>;
+    this.isLoading = true;
+    authObs = this.authService.login(email, password);
+    authObs.subscribe(
+      resData => {
+          this.isLoading = false;
+          this.router.navigate(['/home']);
+      },
+      errorMessage => {
+          this.error = errorMessage;
+          this.isLoading = false;
+      }
+    );
   }
 }
