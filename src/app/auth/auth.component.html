@@ -5,6 +5,10 @@
 <ng-template [ngIf]="this.page == Pages.signIn">
     <ng-template [ngTemplateOutlet]="signIn"></ng-template>
 </ng-template>
+
+<ng-template [ngIf]="this.page == Pages.signUp">
+    <ng-template [ngTemplateOutlet]="signUp"></ng-template>
+</ng-template>
     
 <ng-template #landingPage>
     <div class="row justify-content-center" style="min-height: 50vh;">
@@ -44,22 +48,26 @@
         <div class="row justify-content-center" style="min-height: 40vh;">
             <div class="col-8 align-self-center">
                 <div class="row justify-content-center" style="--min-height: 0;">
-                    <div class="form-group">
-                        <input
-                            type="email"
-                            class="form-control transparent-input"
-                            id="email"
-                            placeholder="Email">
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-control transparent-input"
+                                id="email"
+                                placeholder="Email">
+                        </div>
                     </div>
                 </div>
 
                 <div class="row justify-content-center" style="--min-height: 0;">
-                    <div class="form-group">
-                        <input
-                            type="password"
-                            class="form-control transparent-input"
-                            id="password"
-                            placeholder="Password">
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control transparent-input"
+                                id="password"
+                                placeholder="Password">
+                        </div>
                     </div>
                 </div>
 
@@ -94,6 +102,103 @@
                         style="margin-top: 8px;"
                         (click)="goToSignUp()">
                         <u>Create an account</u>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+<ng-template #signUp>
+    <div class="row justify-content-center" style="min-height: 30vh;">
+        <div class="col-auto align-self-center">
+            <h1 class="display-4 text-light text-center">
+                PARK
+            </h1>
+            <h1 class="text-light text-center">
+                SA MART
+            </h1>
+        </div>
+    </div>
+    
+    <form>
+        <div class="row justify-content-center" style="min-height: 40vh;">
+            <div class="col-10 align-self-center">
+                <div class="row justify-content-center" style="--min-height: 0;">
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control transparent-input"
+                                id="fname"
+                                placeholder="First Name">
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control transparent-input"
+                                id="lname"
+                                placeholder="Last Name">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="row justify-content-center" style="--min-height: 0;">
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-control transparent-input"
+                                id="email"
+                                placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center" style="--min-height: 0;">
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control transparent-input"
+                                id="password"
+                                placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center" style="--min-height: 0;">
+                    <div class="col">
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control transparent-input"
+                                id="password"
+                                placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="min-height: 30vh;">
+            <div class="col-10 align-self-center">
+                <div class="row justify-content-center" style="--min-height: 0;">
+                    <button
+                        type="submit"
+                        class="btn btn-secondary btn-lg btn-block">
+                        Sign Up
+                    </button>
+                    
+                    <p
+                        class="text-light"
+                        style="margin-top: 8px;"
+                        (click)="goToSignIn()">
+                        <u>Already have an account? Log In</u>
                     </p>
                 </div>
             </div>
