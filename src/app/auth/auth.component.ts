@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 enum Pages {
   landingPage,
@@ -44,7 +45,7 @@ export class AuthComponent implements OnInit {
     this.page = Pages.guest;
   }
 
-  signIn() {
+  onSubmit(form: NgForm) {
 
   }
 }
