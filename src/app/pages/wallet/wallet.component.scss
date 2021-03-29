@@ -1,0 +1,1043 @@
+#wallpaper {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#wrapper {
+   /* wrapper */
+
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: rgba(5, 5, 5, 0.4);
+}
+
+#background {
+    /* backgroundImage */
+
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#balance {
+    /* Wallet Balance */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    position: absolute;
+    width: 371px;
+    height: 219px;
+    left: calc(50% - 371px/2);
+    top: 20px;
+
+    /* Global/02. Secondary */
+
+    background: #6C757D;
+    mix-blend-mode: lighten;
+    border-radius: 8px;
+}
+#balance-frame{
+    /* Frame 126 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 372px;
+height: 179px;
+left: -0.5px;
+top: 20px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+#wb-text{
+/* Wallet Balance */
+
+
+position: static;
+width: 150px;
+height: 24px;
+left: 122.5px;
+top: 0px;
+
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+#mid-frame {
+/* Frame 125 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+
+position: static;
+width: 107px;
+height: 48px;
+left: 132.5px;
+top: 36px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 12px 0px;
+}
+
+#money{
+/* 270 */
+
+
+position: static;
+width: 71px;
+height: 48px;
+left: 0px;
+top: 0px;
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 5px;
+}
+
+#unit{
+/* THB */
+
+
+position: static;
+width: 31px;
+height: 24px;
+left: 76px;
+top: 24px;
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 5px;
+}
+#menu{
+/* Wallet Balance Menu */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 10px;
+
+position: static;
+width: 372px;
+height: 83px;
+left: 0px;
+top: 96px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+#top-up{
+/* Top Up */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 70px;
+height: 63px;
+left: 53px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 50px;
+}
+
+#top-icon{
+    /* Icons/Box arrow in up */
+
+
+position: static;
+width: 33px;
+height: 33px;
+left: 8px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+}
+#top-text{
+    /* Top Up */
+
+
+position: static;
+width: 49px;
+height: 20px;
+left: 0px;
+top: 43px;
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#transfer{
+/* Frame 110 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 56px;
+height: 63px;
+left: 152px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 50px;
+}
+
+#transfer-icon{
+ /* transfer */
+
+
+position: static;
+width: 33px;
+height: 33px;
+left: 11.5px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#transfer-text{
+/* Transfer */
+
+
+position: static;
+width: 56px;
+height: 20px;
+left: 0px;
+top: 43px;
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#payment{
+/* Frame 7 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 61px;
+height: 63px;
+left: 258px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 50px;
+}
+
+#payment-icon{
+/* Icons/Credit card */
+
+
+position: static;
+width: 33px;
+height: 33px;
+left: 14px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#payment-text{
+/* Payment */
+
+
+position: static;
+width: 61px;
+height: 20px;
+left: 0px;
+top: 43px;
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#activity{
+/* Recent Activities */
+
+
+position: absolute;
+width: 367px;
+height: 220px;
+left: calc(50% - 367px/2);
+top: 259px;
+
+/* Global/07. Light */
+
+background: #F8F9FA;
+mix-blend-mode: lighten;
+border-radius: 8px;
+}
+#frame{
+/* Frame 8 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+
+position: absolute;
+width: 367px;
+height: 380px;
+left: 0px;
+top: 0px;
+
+}
+
+#title{
+ /* Title */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+left: 5.45%;
+right: 45.78%;
+top: 5.26%;
+bottom: 88.42%;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#list-icon{
+  /* Icons/List */
+
+
+position: static;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#title-text{
+ /* Recent Activities */
+
+
+position: static;
+width: 145px;
+height: 24px;
+left: 34px;
+top: 0px;
+
+/* Heading/H5 */
+
+font-family: SF Pro Display;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+}
+
+#groupOne{
+ /* Group 1 */
+
+
+position: static;
+width: 347px;
+height: 68px;
+left: 20px;
+top: 54px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 10px 0px;
+}
+
+#topFrameOne{
+/* Frame 9 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 327px;
+height: 24px;
+left: 20px;
+top: 54px;
+}
+
+
+#dateOne{
+/* 28 Dec 21 */
+
+
+position: static;
+width: 103px;
+height: 24px;
+left: calc(50% - 103px/2 - 112px);
+top: calc(50% - 24px/2);
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 9px;
+}
+
+#timeOne{
+  /* 08:41 - 12:22 */
+
+
+position: static;
+width: 103px;
+height: 24px;
+left: calc(50% - 103px/2);
+top: calc(50% - 24px/2);
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 1;
+margin: 0px 9px;
+}
+
+#costOne{
+/* 200 Baht */
+
+
+position: static;
+width: 103px;
+height: 24px;
+left: calc(50% - 103px/2 + 112px);
+top: calc(50% - 24px/2);
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 1;
+margin: 0px 9px;
+}
+
+#bottomFrameOne{
+/* Frame 10 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 327px;
+height: 24px;
+left: 20px;
+top: 88px;
+}
+#licenseOne{
+    /* 1งง 1111 */
+
+
+position: static;
+width: 56px;
+height: 24px;
+left: calc(50% - 56px/2 - 135.5px);
+top: calc(50% - 24px/2);
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 9px;
+}
+
+#buildingOne{
+    /* Political Science 6th Flr. */
+
+
+position: static;
+width: 173px;
+height: 24px;
+left: 65px;
+top: 0px;
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 9px;
+}
+#methodOne{
+/* Paid by Wallet */
+
+
+position: static;
+width: 102px;
+height: 24px;
+left: calc(50% - 96px/2 + 116.5px);
+top: calc(50% - 24px/2);
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 9px;
+}
+
+#lineOne{
+    /* Line 6 */
+
+
+position: absolute;
+width: 347px;
+height: 0px;
+left: 20px;
+top: 122px;
+
+/* Global/08. Dark */
+
+border: 3px solid #343A40;
+}
+
+
+
+
+#groupTwo{
+  /* Group 2 */
+
+
+position: static;
+width: 347px;
+height: 68px;
+left: 20px;
+top: 132px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 10px 0px;
+}
+   
+#topFrameTwo{
+/* Frame 9 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 327px;
+height: 24px;
+left: 20px;
+top: 132px;
+}
+   
+   
+#dateTwo{
+/* 28 Dec 21 */
+
+
+position: static;
+width: 103px;
+height: 24px;
+left: calc(50% - 103px/2 - 112px);
+top: calc(50% - 24px/2);
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 9px;
+   }
+   
+   #timeTwo{
+/* 08:41 - 12:22 */
+
+
+position: static;
+width: 103px;
+height: 24px;
+left: calc(50% - 103px/2);
+top: calc(50% - 24px/2);
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 1;
+margin: 0px 9px;
+}
+   #costTwo{
+/* 200 Baht */
+
+
+position: static;
+width: 103px;
+height: 24px;
+left: calc(50% - 103px/2 + 112px);
+top: calc(50% - 24px/2);
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 1;
+margin: 0px 9px;
+   }
+   
+   #bottomFrameTwo{
+ /* Frame 10 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 327px;
+height: 24px;
+left: 20px;
+top: 166px;
+   }
+   #licenseTwo{
+/* 1งง 1111 */
+
+
+position: static;
+width: 56px;
+height: 24px;
+left: calc(50% - 56px/2 - 135.5px);
+top: calc(50% - 24px/2);
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 9px;
+   }
+   
+   #buildingTwo{
+/* Political Science 6th Flr. */
+
+
+position: static;
+width: 173px;
+height: 24px;
+left: 65px;
+top: 0px;
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 9px;
+   }
+   #methodTwo{
+/* Paid by Wallet */
+
+
+position: static;
+width: 102px;
+height: 24px;
+left: calc(50% - 96px/2 + 116.5px);
+top: calc(50% - 24px/2);
+
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: right;
+
+/* Global/08. Dark */
+
+color: #343A40;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 9px;
+   }
+   
+   #lineTwo{
+/* Line 6 */
+
+
+position: absolute;
+width: 347px;
+height: 0px;
+left: 20px;
+top: 200px;
+
+/* Global/08. Dark */
+
+border: 3px solid #343A40;
+   }
