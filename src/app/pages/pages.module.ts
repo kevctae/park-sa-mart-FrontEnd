@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AccountComponent } from './account/account.component';
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
+import { EditCarComponent } from './account/edit-car/edit-car.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     HomeComponent,
     WalletComponent,
-    AccountComponent
+    AccountComponent,
+    EditCarComponent
   ],
   imports: [
     CommonModule,
