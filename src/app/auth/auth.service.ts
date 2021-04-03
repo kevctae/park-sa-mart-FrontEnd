@@ -20,6 +20,27 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  signup(email: string, password: string, fname: string, lname: string) {
+    return this.http.post<AuthResponseData>(
+        'http://somchai09.trueddns.com:43322/register',
+        {
+            email: email,
+            password: password,
+            fname: fname,
+            lname: lname,
+        }
+    ).pipe(
+        catchError(this.handleError), 
+        tap(resData => {
+            this.handleAuthentication(
+              resData.email,
+              resData.token,
+              +resData.expiresIn
+            );
+        })
+    );
+  }
+
   login(email: string, password: string) {
     return this.http.post<AuthResponseData>(
       'http://somchai09.trueddns.com:43322/login',
@@ -34,7 +55,7 @@ export class AuthService {
           resData.email,
           resData.token,
           +resData.expiresIn
-        )
+        );
       })
     )
   }
