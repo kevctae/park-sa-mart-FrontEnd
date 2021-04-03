@@ -1,32 +1,22 @@
 #bar{
-    /* Bar */
+    position: absolute;
+    height: 80px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    /* Global/01. Primary */
+    background: #11212E;
+}
+#barFrame{
 position: absolute;
-height: 80px;
-left: 0px;
-right: 0px;
-top: 0px;
-
-/* Global/01. Primary */
-
-background: #11212E;
-border-radius: 0px 0px 8px 8px;
+width: 500px;
+height: 90px;
+left: 50%;
+top: 50%;
+margin: -45px 0 0 -250px;
 }
 
-#bar-frame{
-    /* Group 71 */
-
-
-position: absolute;
-width: 371px;
-height: 24px;
-left: 20px;
-top: 28px;
-}
-
-#arrow{
-    /* Icons/Arrow left */
-
-
+#barArrow{
 position: absolute;
 width: 24px;
 height: 24px;
@@ -34,9 +24,7 @@ left: 20px;
 top: calc(50% - 24px/2);
 }
 
-#bar-text{
-    /* Payment Methods */
-
+#barText{
 
 position: absolute;
 width: 371px;
