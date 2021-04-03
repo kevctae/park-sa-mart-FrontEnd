@@ -201,7 +201,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: flex-start;
-padding: 10px;
+padding: 5px;
 
 position: static;
 width: 372px;
@@ -228,12 +228,14 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
+//!padding
+padding-left: 20%;
 
 position: static;
 width: 70px;
 height: 63px;
 left: 53px;
-top: 10px;
+top: 43px;
 
 
 /* Inside Auto Layout */
@@ -267,10 +269,11 @@ margin: 10px 0px;
 
 
 position: static;
-width: 49px;
+width: 70px;
 height: 20px;
 left: 0px;
-top: 43px;
+top: 20px;
+
 
 /* identical to box height, or 120% */
 
@@ -301,6 +304,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
+
 
 position: static;
 width: 56px;
@@ -375,6 +379,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
+//!padding
+padding-right: 20%;
 
 position: static;
 width: 61px;
