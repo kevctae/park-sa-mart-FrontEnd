@@ -26,6 +26,10 @@ const routes: Routes = [
                 path: 'account', 
                 component: AccountComponent
             },
+            { 
+                path: 'wallet/top-up', 
+                component: AccountComponent
+            },
         ]
     }
 ] 
