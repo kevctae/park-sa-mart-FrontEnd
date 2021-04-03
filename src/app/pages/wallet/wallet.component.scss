@@ -4,6 +4,7 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
+    
 }
 
 #wrapper {
@@ -15,7 +16,7 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
-
+    
     background: rgba(5, 5, 5, 0.4);
 }
 
@@ -705,7 +706,7 @@ top: 88px;
 
 
 position: static;
-width: 56px;
+width: 100px;
 height: 24px;
 left: calc(50% - 56px/2 - 135.5px);
 top: calc(50% - 24px/2);
@@ -726,17 +727,17 @@ color: #343A40;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 0px 9px;
+margin: 0px 0px 0px 9px;
 }
 
 #buildingOne{
     /* Political Science 6th Flr. */
 
 
-position: static;
+position: relative;
 width: 173px;
 height: 24px;
-left: 65px;
+left: -20px;
 top: 0px;
 
 
@@ -751,28 +752,28 @@ color: #343A40;
 
 
 /* Inside Auto Layout */
-
 flex: none;
 order: 1;
 flex-grow: 0;
-margin: 0px 9px;
+margin: 0px 0px;
 }
 #methodOne{
 /* Paid by Wallet */
 
 
-position: static;
-width: 102px;
+position: relative;
+width: 70px;
 height: 24px;
-left: calc(50% - 96px/2 + 116.5px);
+left:-20px;
+//left: calc(50% - 96px/2 + 116.5px);
 top: calc(50% - 24px/2);
-
+word-wrap: break-word;
 
 /* identical to box height, or 150% */
 
 display: flex;
 align-items: center;
-text-align: right;
+text-align: center;
 
 /* Global/08. Dark */
 
@@ -791,11 +792,11 @@ margin: 0px 9px;
     /* Line 6 */
 
 
-position: absolute;
+position: relative;
 width: 347px;
 height: 0px;
-left: 20px;
-top: 122px;
+left: -10px;
+top: 50px;
 
 /* Global/08. Dark */
 
