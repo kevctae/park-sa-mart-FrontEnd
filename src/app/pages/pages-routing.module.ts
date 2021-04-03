@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { NavbarComponent } from "../core/components/navbar/navbar.component";
 import { AccountComponent } from "./account/account.component";
 import { HomeComponent } from "./home/home.component";
+import { AmountComponent } from "./wallet/top-up/amount/amount.component";
 import { WalletComponent } from "./wallet/wallet.component";
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
             { 
                 path: 'wallet/top-up', 
                 component: AccountComponent
+            },
+            { 
+                path: 'wallet/top-up/amount', 
+                component: AmountComponent
             },
         ]
     }

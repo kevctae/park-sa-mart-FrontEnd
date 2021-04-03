@@ -6,6 +6,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { AccountComponent } from './account/account.component';
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { TopUpComponent } from './wallet/top-up/top-up.component';
+import { AmountComponent } from './wallet/top-up/amount/amount.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TopUpComponent } from './wallet/top-up/top-up.component';
     HomeComponent,
     WalletComponent,
     AccountComponent,
-    TopUpComponent
+    TopUpComponent,
+    AmountComponent
   ],
   imports: [
     CommonModule,
