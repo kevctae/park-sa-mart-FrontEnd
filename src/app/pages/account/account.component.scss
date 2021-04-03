@@ -4,9 +4,9 @@
 
     position: absolute;
     height: 229px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
 
     border-radius: 8px;
 }
@@ -109,7 +109,7 @@
     /* Global/07. Light */
 
     background: #F8F9FA;
-    }
+}
 
 #mid {
     /* information */
@@ -119,10 +119,11 @@
     padding: 0px;
 
     position: absolute;
-    width: 371.03px;
+    width: 371px;
     height: 301px;
     left: calc(50% - 371.03px/2 + 0.02px);
     top: 249px;
+    overflow: scroll;
 }
 
 #email {
@@ -147,7 +148,7 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-    margin: 20px 0px;
+    margin: 0px 0px;
 
 }
 #email-layout {
@@ -172,8 +173,9 @@
 
     flex: none;
     order: 0;
-    flex-grow: 1;
+    flex-grow: 0;
     margin: 0px 0px;
+    padding: 0px 0px;
 }
 #email-text {
     /* E-mail Address */
@@ -187,7 +189,7 @@
 
     /* identical to box height, or 120% */
 
-    text-align: center;
+    text-align: left;
 
     color: #000000;
 
@@ -437,7 +439,7 @@
     margin: 20px 0px;
 }
 
-#second-owned {
+#car-owned {
     /* Frame 49 */
 
 
@@ -448,11 +450,10 @@
     align-items: flex-start;
     padding: 0px;
 
-    position: static;
+    position: absolute;
     width: 371.03px;
-    height: 40px;
+    height: 20px;
     left: 0px;
-    top: 172px;
 
 
     /* Inside Auto Layout */
@@ -461,10 +462,9 @@
     order: 3;
     align-self: stretch;
     flex-grow: 0;
-    margin: 20px 0px;
 }
 
-#second-layout {
+#car-layout {
     /* Frame 16 */
 
 
@@ -488,9 +488,9 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-    margin: 20px 0px;
+    margin: 0;
 }
-#second-license {
+#car-license {
     /* 1ขอ 1112 */
 
 
@@ -517,7 +517,7 @@
     flex-grow: 0;
     margin: 0px 30px;
 }
-#second-brand {
+#car-brand {
     /* Honda */
 
 
@@ -543,7 +543,7 @@
     flex-grow: 0;
     margin: 0px 30px;
 }
-#second-model {
+#car-model {
     /* City */
 
 
@@ -571,7 +571,7 @@
     margin: 0px 30px;
 }
 
-#second-line {
+#car-line {
     /* Line 10 */
 
 
@@ -594,11 +594,10 @@
     /* Edit Car */
 
 
-    position: static;
+    position: absolute;
     width: 371px;
     height: 19px;
     left: 0px;
-    top: 232px;
 
   
     /* or 150% */
@@ -619,7 +618,7 @@
     margin: 20px 0px;
 }
 
-#Sign-Out {
+#sign-Out {
     /* Sign Out */
 
 
@@ -645,7 +644,6 @@
     order: 5;
     align-self: stretch;
     flex-grow: 0;
-    margin: 20px 0px;
 }
 
 #version {
@@ -667,4 +665,48 @@
     color: #000000;
 }
 
+@media only screen and (max-width: 411px) {
+    #header-component, #header-text {
+        width: 100vw;
+        left: 0%;
+    }
+    
+    #mid {
+        margin: 20px;
+        left: 0%;
+        width: calc(100vw - 40px);
+        top: 229px;
+    }
 
+    #email, #car-owned, #car-layout, #car-line {
+        width: calc(100vw - 40px);
+    }
+
+    #email-layout, #email-brian, #edit {
+        width: calc(100vw - 40px - 24px);
+    }
+
+    #car-license, #car-brand, #car-model {
+        width: calc((100vw - 40px) / 3);
+        margin: 0;
+    }
+}
+
+#footer {
+    /* Parking Info */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    width: 100vw;
+    height: 133px;
+    top: 632px;
+    left: 0%;
+    background: #F8F9FA;
+    /* Global/07. Light */
+}
