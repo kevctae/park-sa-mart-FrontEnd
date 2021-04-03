@@ -224,7 +224,8 @@
                 <div class="row justify-content-center" style="--min-height: 0;">
                     <button
                         type="submit"
-                        class="btn btn-secondary btn-lg btn-block">
+                        class="btn btn-secondary btn-lg btn-block"
+                        [disabled]="!signUpForm.valid">
                         Sign Up
                     </button>
                     

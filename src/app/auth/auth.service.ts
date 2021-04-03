@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { catchError, tap } from "rxjs/operators";
-import { User } from './user.model';
+import { Auth } from './auth.model';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -15,7 +15,7 @@ export interface AuthResponseData {
   providedIn: 'root'
 })
 export class AuthService {
-  user = new BehaviorSubject<User>(null);
+  user = new BehaviorSubject<Auth | null>(null);
   private tokenExpirationTimer: any;
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -66,12 +66,12 @@ export class AuthService {
         id: string;
         _token: string;
         _tokenExpirationDate: string;
-    } = JSON.parse(localStorage.getItem('userData'));
-    if (!userData) {
+    } = JSON.parse(localStorage.getItem('userData') || '{}');
+    if (Object.keys(userData).length === 0) {
         return;
     }
 
-    const loadedUser = new User(
+    const loadedUser = new Auth(
         userData.email,
         userData._token,
         new Date(userData._tokenExpirationDate)
@@ -106,7 +106,7 @@ export class AuthService {
   private handleAuthentication(email: string, token: string, expiresIn: number) {
     const expirationDate = new Date(
         new Date().getTime() + expiresIn * 1000);
-    const user = new User(
+    const user = new Auth(
         email,
         token, 
         expirationDate

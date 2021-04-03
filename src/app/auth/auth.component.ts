@@ -18,7 +18,7 @@ enum Pages {
 export class AuthComponent implements OnInit {
   page: Pages = Pages.landingPage;
   isLoading = false;
-  error: string = null;
+  error: string | null = null;
 
   constructor(private authService: AuthService, private router: Router) { }
 
