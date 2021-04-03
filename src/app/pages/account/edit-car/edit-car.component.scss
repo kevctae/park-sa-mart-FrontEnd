@@ -1,3 +1,23 @@
+#wallpaper{
+    
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+}
+#wrapper{
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Global/07. Light */
+
+background: #F8F9FA;
+}
+
 #bar{
     position: absolute;
     height: 80px;
@@ -55,10 +75,11 @@ align-items: center;
 padding: 0px;
 
 position: absolute;
-left: 0%;
+left: calc(50% - 371px/2);
 right: 0%;
 top: 12.15%;
 bottom: 45.44%;
+width:371px;
 
 /* Global/09. White */
 
@@ -82,7 +103,7 @@ align-items: center;
 padding: 20px;
 
 position: static;
-width: 411px;
+width: 371px;
 height: 349px;
 left: 0px;
 top: 0px;
@@ -144,6 +165,7 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
+padding-left: 10px;
 
 position: static;
 width: 366px;
@@ -261,7 +283,7 @@ align-items: center;
 padding: 0px;
 
 position: static;
-width: 366px;
+width: 351px;
 height: 33px;
 left: 0px;
 top: 90px;
@@ -393,7 +415,7 @@ height: 268px;
 left: calc(50% - 371px/2);
 top: 472px;
 
-background: #FFFFFF;
+background: #444;
 border-radius: 8px;
 }
 
@@ -419,7 +441,7 @@ color: #000000;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 25px 0px;
+margin: 0px 0px;
 }
 
 #li-frame{
@@ -478,4 +500,126 @@ flex: none;
 order: 2;
 flex-grow: 0;
 margin: 25px 0px;
+}
+
+#add-license-container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: relative;
+width: 251px;
+height: 90px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+#license-input-box{
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: left;
+align-items: center;
+padding: 6px 12px;
+
+position: static;
+width: 251px;
+height: 36px;
+left: 0px;
+top: 0px;
+
+/* Global/06. Info */
+background: #C9C9C9;
+/* Components/Forms/Input text */
+border: 1px solid #495057;
+box-sizing: border-box;
+border-radius: 4px;
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 24px 0px;
+}
+
+/* Text */
+#license-text{
+position: static;
+width: 225px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+/* Components/Buttons/Default */
+font-family: SF Pro Display;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+/* Global/09. White */
+color: #000;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+
+}
+
+#add-anotherCar-container{
+    position: static;
+    width: 154px;
+    height: 30px;
+    left: 0px;
+    top: 60px;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 24px 0px;
+}
+#add-anotherCar-text{
+    /* Add another car... */
+
+position: absolute;
+width: 119px;
+height: 29px;
+left: 35px;
+top: 61px;
+
+/* Body/Paragraph + Underline */
+font-family: SF Pro Display;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-decoration-line: underline;
+
+color: #000000;
+
+
+}
+#plus-frame{
+    position: absolute;
+width: 26px;
+height: 26px;
+left: 0px;
+top: 60px;
 }
