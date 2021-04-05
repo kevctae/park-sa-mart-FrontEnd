@@ -221,7 +221,7 @@ top: 43px;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 0px 50px;
+// margin: 0px 50px;
 }
 
 #top-icon{
@@ -358,7 +358,7 @@ flex-direction: column;
 align-items: center;
 padding: 0px;
 //!padding
-padding-right: 20%;
+// padding-right: 20%;
 
 position: static;
 width: 61px;
@@ -372,7 +372,7 @@ top: 10px;
 flex: none;
 order: 2;
 flex-grow: 0;
-margin: 0px 50px;
+// margin: 0px 50px;
 }
 
 #payment-icon{
@@ -678,6 +678,7 @@ height: 24px;
 left: 20px;
 top: 88px;
 }
+
 #licenseOne{
     /* 1งง 1111 */
 
@@ -734,6 +735,7 @@ order: 1;
 flex-grow: 0;
 margin: 0px 0px;
 }
+
 #methodOne{
 /* Paid by Wallet */
 
@@ -780,9 +782,6 @@ top: 50px;
 border: 3px solid #343A40;
 }
 
-
-
-
 #groupTwo{
   /* Group 2 */
 
@@ -819,8 +818,7 @@ height: 24px;
 left: 20px;
 top: 132px;
 }
-   
-   
+
 #dateTwo{
 /* 28 Dec 21 */
 
@@ -847,9 +845,9 @@ flex: none;
 order: 0;
 flex-grow: 1;
 margin: 0px 9px;
-   }
+}
    
-   #timeTwo{
+#timeTwo{
 /* 08:41 - 12:22 */
 
 
@@ -878,7 +876,8 @@ order: 1;
 flex-grow: 1;
 margin: 0px 9px;
 }
-   #costTwo{
+
+#costTwo{
 /* 200 Baht */
 
 
@@ -906,10 +905,10 @@ flex: none;
 order: 2;
 flex-grow: 1;
 margin: 0px 9px;
-   }
-   
-   #bottomFrameTwo{
- /* Frame 10 */
+}
+
+#bottomFrameTwo{
+/* Frame 10 */
 
 
 /* Auto Layout */
@@ -924,8 +923,8 @@ width: 327px;
 height: 24px;
 left: 20px;
 top: 166px;
-   }
-   #licenseTwo{
+}
+#licenseTwo{
 /* 1งง 1111 */
 
 
@@ -951,9 +950,9 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 9px;
-   }
-   
-   #buildingTwo{
+}
+
+#buildingTwo{
 /* Political Science 6th Flr. */
 
 
@@ -980,8 +979,9 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 0px 9px;
-   }
-   #methodTwo{
+}
+
+#methodTwo{
 /* Paid by Wallet */
 
 
@@ -1009,9 +1009,9 @@ flex: none;
 order: 2;
 flex-grow: 0;
 margin: 0px 9px;
-   }
-   
-   #lineTwo{
+}
+
+#lineTwo{
 /* Line 6 */
 
 
@@ -1024,11 +1024,15 @@ top: 200px;
 /* Global/08. Dark */
 
 border: 3px solid #343A40;
-   }
+}
 
 @media only screen and (max-width: 411px) {
-    #frame, #balance, #balance-frame, #menu, #activity {
+    #balance, #balance-frame, #menu{
         width: calc(100vw - 40px);
         left: 20px;
+    }
+
+    #transfer {
+        margin: 0px 12vw;
     }
 }
