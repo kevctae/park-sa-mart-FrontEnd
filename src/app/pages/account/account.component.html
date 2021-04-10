@@ -2,8 +2,8 @@
     <div id="header-rectangle"></div>
     <div id="header-component">
         <img class="header-image" src="https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image-700x700.jpeg" alt="">
-        <div id="header-text">
-            <h4 style="margin: auto;">Brian McNhoi</h4>
+        <div id="header-text" *ngIf="account">
+            <h4 style="margin: auto;">{{account.fname}} {{account.lname}}</h4>
         </div>
     </div>
 </div>
@@ -14,8 +14,8 @@
             <div id="email-text">
                 <h5 style="margin: 0;">E-mail Address</h5>
             </div>
-            <div id="email-brian">
-                <p style="margin: 0;">brian.m@chula.ac.th</p>
+            <div id="email-brian" *ngIf="account">
+                <p style="margin: 0;">{{account.email}}</p>
             </div>
         </div>
         <div id="edit-icon">
@@ -79,7 +79,7 @@
         <u style="margin: auto;">Edit Car</u> 
     </div>
 
-    <div id="sign-out" style="top: 328px;">
+    <div id="sign-out" style="top: 328px;" (click)="signOut()">
         <b style="margin: auto;">Sign Out</b>
     </div>
     
