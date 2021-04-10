@@ -600,7 +600,7 @@ color: #343A40;
 flex: none;
 order: 0;
 flex-grow: 1;
-margin: 0px 9px;
+margin: 0px;
 }
 
 #timeOne{
@@ -629,7 +629,7 @@ color: #343A40;
 flex: none;
 order: 1;
 flex-grow: 1;
-margin: 0px 9px;
+margin: 0px;
 }
 
 #costOne{
@@ -658,7 +658,7 @@ color: #343A40;
 flex: none;
 order: 2;
 flex-grow: 1;
-margin: 0px 9px;
+margin: 0px;
 }
 
 #bottomFrameOne{
@@ -705,7 +705,7 @@ color: #343A40;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 0px 0px 0px 9px;
+margin: 0px;
 }
 
 #buildingOne{
@@ -733,7 +733,7 @@ color: #343A40;
 flex: none;
 order: 1;
 flex-grow: 0;
-margin: 0px 0px;
+margin: 0px;
 }
 
 #methodOne{
@@ -764,7 +764,7 @@ color: #343A40;
 flex: none;
 order: 2;
 flex-grow: 0;
-margin: 0px 9px;
+margin: 0px;
 }
 
 #lineOne{
@@ -1027,12 +1027,27 @@ border: 3px solid #343A40;
 }
 
 @media only screen and (max-width: 411px) {
-    #balance, #balance-frame, #menu{
+    #balance, #balance-frame, #menu, #activity{
         width: calc(100vw - 40px);
         left: 20px;
     }
 
     #transfer {
         margin: 0px 12vw;
+    }
+
+    #frame {
+        width: calc(100vw - 40px);
+    }
+
+    #groupOne, #topFrameOne, #bottomFrameOne, #lineOne {
+        left: 0px;
+        width: calc(100vw - 40px);
+    }
+
+    #dateOne, #timeOne, #costOne, #licenseOne, #buildingOne, #methodOne {
+        // width: calc((100vw - 60px ) / 3);
+        width: auto;
+        margin: auto;
     }
 }
