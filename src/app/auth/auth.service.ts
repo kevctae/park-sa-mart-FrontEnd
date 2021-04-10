@@ -61,6 +61,11 @@ export class AuthService {
           resData.token,
           +resData.expiresIn
         );
+
+        this.accountService.getAccount(resData.email, resData.token)
+            .subscribe(resAccData => {
+                this.handleAuthentication(resData.email, resAccData.token, +resAccData.expiresIn)
+        });
       })
     )
   }
@@ -83,9 +88,12 @@ export class AuthService {
     );
 
     if (loadedAuth.token) {
-        this.accountService.getAccount(loadedAuth.email, loadedAuth.token);
+        this.accountService.getAccount(loadedAuth.email, loadedAuth.token)
+            .subscribe(resData => {
+                this.handleAuthentication(loadedAuth.email, resData.token, +resData.expiresIn)
+        });
+
         this.auth.next(loadedAuth);
-        console.log(authData._tokenExpirationDate);
         const expirationDuration =
         new Date(authData._tokenExpirationDate).getTime() -
         new Date().getTime();
@@ -110,8 +118,7 @@ export class AuthService {
     }, expirationDuration)
   }
 
-  private handleAuthentication(email: string, token: string, expiresIn: number) {
-    this.accountService.getAccount(email, token);
+  private handleAuthentication(email: string, token: string, expiresIn: number) {    
     const expirationDate = new Date(
         new Date().getTime() + expiresIn * 1000);
     const auth = new Auth(

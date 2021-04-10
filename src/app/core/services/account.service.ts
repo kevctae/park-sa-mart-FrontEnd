@@ -2,7 +2,18 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { AuthService } from 'src/app/auth/auth.service';
 import { Account } from '../models/account.model'
+
+export interface AccountResponseData {
+    fname: string;
+    lname: string;
+    wallet?: string;
+    primary_card_no?: string;
+    main_payment_method?: string;
+    token: string;
+    expiresIn: string;
+  }
 
 @Injectable({
     providedIn: 'root'
@@ -10,11 +21,12 @@ import { Account } from '../models/account.model'
 export class AccountService {
     account = new BehaviorSubject<Account | null>(null);
 
-    constructor(private http: HttpClient) { }
+    constructor(
+        private http: HttpClient,) { }
 
     getAccount(email: string, token: string) {
-        this.http.post<Account>(
-            'http://localhost:5000/retrieveprofile',
+        return this.http.post<AccountResponseData>(
+            'http://somchai09.trueddns.com:43322/retrieveprofile',
             {
                 email: email,
                 token: token,
@@ -22,10 +34,35 @@ export class AccountService {
         ).pipe(
             catchError(this.handleError), 
             tap(resData => {
-                console.log(resData.email);
-                this.account.next(resData);
+                this.handleAccount(
+                    resData.fname,
+                    resData.lname,
+                    email,
+                    resData.wallet,
+                    resData.primary_card_no,
+                    resData.main_payment_method
+                );
             })
-        ).subscribe();
+        );
+    }
+
+    private handleAccount(
+        fname: string, 
+        lname: string,
+        email: string,
+        wallet: string | undefined,
+        primary_card_no: string | undefined,
+        main_payment_method: string | undefined) {
+        const new_account: Account = {
+            fname: fname,
+            lname: lname,
+            email: email,
+            wallet: wallet,
+            primary_card_no: primary_card_no,
+            main_payment_method: main_payment_method,
+        }
+
+        this.account.next(new_account);
     }
 
     private handleError(errorRes: HttpErrorResponse) {

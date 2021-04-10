@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   initializeAccount() {
     this.account$ = this.account$ = this.accountService.account.subscribe(account => {
-      console.log(account?.email);
       this.account = account;
     })
   }
