@@ -23,7 +23,7 @@ export class AuthGuard implements CanActivate {
         // }
 
         // return true;
-        return this.authService.user.pipe(
+        return this.authService.auth.pipe(
             take(1),
             map(user => {
                 const isAuth = !!user;

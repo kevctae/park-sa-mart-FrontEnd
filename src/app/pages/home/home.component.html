@@ -1,10 +1,10 @@
-<div id="profile-box">
+<div id="profile-box" *ngIf="account">
     <img
         class="profile-icon"
         src="https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image-700x700.jpeg">
 
     <div id="profile-text">
-        Good Morning, Kevin
+        Good Morning, {{ account.fname }}
     </div>
 </div>
 
