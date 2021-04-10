@@ -71,7 +71,7 @@ export class AuthComponent implements OnInit {
     authObs.subscribe(
       resData => {
           this.isLoading = false;
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home'], { skipLocationChange: true });
       },
       errorMessage => {
           this.error = errorMessage;
@@ -87,7 +87,7 @@ export class AuthComponent implements OnInit {
     authObs.subscribe(
       resData => {
           this.isLoading = false;
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home'], { skipLocationChange: true });
       },
       errorMessage => {
           this.error = errorMessage;
