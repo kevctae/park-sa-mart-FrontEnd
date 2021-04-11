@@ -36,6 +36,10 @@ export class AccountComponent implements OnInit, OnDestroy {
     this.router.navigate(['/account/edit-car'], { skipLocationChange: true });
   }
 
+  routeEditAccount() {
+    this.router.navigate(['/account/edit-account'], { skipLocationChange: true });
+  }
+
   ngOnDestroy() {
     this.account$.unsubscribe();
   }
