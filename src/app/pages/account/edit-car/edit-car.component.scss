@@ -19,24 +19,37 @@ background: #F8F9FA;
 }
 
 #bar{
-    position: absolute;
-    height: 80px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    /* Global/01. Primary */
-    background: #11212E;
-}
-#barFrame{
+/* Bar */
+
+
 position: absolute;
-width: 500px;
-height: 90px;
-left: 50%;
-top: 50%;
-margin: -45px 0 0 -250px;
+height: 80px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* Global/01. Primary */
+
+background: #11212E;
+border-radius: 0px 0px 8px 8px;
+}
+
+#barFrame{
+/* Group 71 */
+
+
+position: absolute;
+width: calc(100vw - 40px);
+height: 24px;
+left: 20px;
+top: 28px;
+
 }
 
 #barArrow{
+/* Icons/Arrow left */
+
+
 position: absolute;
 width: 24px;
 height: 24px;
@@ -45,13 +58,14 @@ top: calc(50% - 24px/2);
 }
 
 #barText{
+/* Payment Methods */
+
 
 position: absolute;
 width: 371px;
 height: 24px;
 left: calc(50% - 371px/2);
-top: 28px;
-
+top: calc(50% - 24px/2);;
 /* identical to box height, or 120% */
 
 display: flex;
@@ -77,9 +91,10 @@ padding: 0px;
 position: absolute;
 left: calc(50% - 371px/2);
 right: 0%;
-top: 12.15%;
+top: 100px;
 bottom: 45.44%;
 width:371px;
+height: 349px;
 
 /* Global/09. White */
 
@@ -108,10 +123,6 @@ height: 349px;
 left: 0px;
 top: 0px;
 
-/* Global/09. White */
-
-background: #FFFFFF;
-
 /* Inside Auto Layout */
 
 flex: none;
@@ -121,39 +132,61 @@ flex-grow: 0;
 margin: 0px 0px;
 }
 
-// #img-frame{
-//     /* Content/Image */
 
 
-// position: static;
-// width: 363px;
-// height: 180px;
-// left: 24px;
-// top: 20px;
-
-// /* Global/09. White */
-
-// background: #FFFFFF;
-
-// /* Inside Auto Layout */
-
-// flex: none;
-// order: 0;
-// flex-grow: 0;
-// margin: 12px 0px;
-// }
-
-// .car-thumbnail{
-//     /* ff7d9d33-ca03-496c-ab99-a103e3a3c9f4 1 */
 
 
-// position: absolute;
-// left: 7.71%;
-// right: 7.51%;
-// top: 1.11%;
-// bottom: -0.19%;
-// border-radius: 8px;
-// }
+#img-frame{
+    /* Content/Image */
+
+
+position: static;
+width: 371px;
+height: 180px;
+left: 24px;
+top: 20px;
+
+
+/* Inside Auto Layout */
+
+overflow: hidden;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 12px 0px;
+}
+
+.car-thumbnail{
+    /* ff7d9d33-ca03-496c-ab99-a103e3a3c9f4 1 */
+
+
+   /* Car Thumbnail */
+
+
+   position: absolute;
+   left: -134.5px;
+   right: 0%;
+   top: -76.5px;
+   bottom: 0%;
+
+   display: block;
+}
+
+@media only screen and (max-width: 371px) {
+    #barText {
+        width: calc(100vw - 40px);
+        left: 0px;
+    }
+
+    #Base, #Base-body, #img-frame {
+        width: 100vw;
+        left: 0px;
+    }
+
+    .car-thumbnail {
+        left: calc(-1 * (320px - (100vw - 40px) / 2));
+    }
+}
 
 #info-frame{
 /* Title & Subtitle */
