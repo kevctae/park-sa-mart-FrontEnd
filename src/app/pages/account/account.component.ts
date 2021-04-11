@@ -13,9 +13,9 @@ import { CarService } from 'src/app/core/services/car.service';
 })
 export class AccountComponent implements OnInit, OnDestroy {
   account: Account | null = null;
-  car: Car[] | null = null;
+  cars: Car[] | null = null;
   account$: Subscription = new Subscription;
-  car$: Subscription = new Subscription;
+  cars$: Subscription = new Subscription;
 
   constructor(
     private authService: AuthService,
@@ -35,9 +35,9 @@ export class AccountComponent implements OnInit, OnDestroy {
   }
 
   initializeCar() {
-    this.car$ = this.carService.car.subscribe(car => {
-      this.car = car;
-      console.log(car);
+    this.cars$ = this.carService.cars.subscribe(cars => {
+      this.cars = cars;
+      console.log(cars);
     })
   }
 

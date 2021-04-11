@@ -44,8 +44,33 @@
         </div>
         <div id="first-line"></div>
     </div> -->
+    <ng-container *ngIf="cars">
+        <div *ngFor="let car of cars; let i = index" id="car-owned" [style.top.px]="60 * i + 108">
+            <div id="car-layout">
+                <div id ="car-license">
+                    <h6 style="margin: 0;">{{car.platenum}}</h6>
+                </div>
+                <div id ="car-brand">
+                    <h6 style="margin: 0;">{{car.brand}}</h6>
+                </div>
+                <div id ="car-model">
+                    <h6 style="margin: 0;">{{car.model}}</h6>
+                </div>
+            </div>
+            <div id="car-line"></div>
+        </div>
+
+        <div id="edit" [style.top.px]="60 * cars.length + 108">
+            <u style="margin: auto;" (click)="routeEditCar()">Edit Car</u> 
+        </div>
     
-    <div id="car-owned" style="top: 108px;">
+        <div id="sign-out" [style.top.px]="60 * cars.length + 208" (click)="signOut()">
+            <b style="margin: auto;">Sign Out</b>
+        </div>
+    </ng-container>
+    
+
+    <!-- <div id="car-owned" style="top: 168px;">
         <div id="car-layout">
             <div id ="car-license">
                 <h6 style="margin: 0;">1ขอ 1112</h6>
@@ -58,30 +83,9 @@
             </div>
         </div>
         <div id="car-line"></div>
-    </div>
-
-    <div id="car-owned" style="top: 168px;">
-        <div id="car-layout">
-            <div id ="car-license">
-                <h6 style="margin: 0;">1ขอ 1112</h6>
-            </div>
-            <div id ="car-brand">
-                <h6 style="margin: 0;">Honda</h6>
-            </div>
-            <div id ="car-model">
-                <h6 style="margin: 0;">City</h6>
-            </div>
-        </div>
-        <div id="car-line"></div>
-    </div>
+    </div> -->
     
-    <div id="edit" style="top: 228px;">
-        <u style="margin: auto;" (click)="routeEditCar()">Edit Car</u> 
-    </div>
-
-    <div id="sign-out" style="top: 328px;" (click)="signOut()">
-        <b style="margin: auto;">Sign Out</b>
-    </div>
+    
     
 </div>
 

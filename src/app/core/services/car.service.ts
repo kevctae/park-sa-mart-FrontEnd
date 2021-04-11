@@ -8,7 +8,7 @@ import { Car } from '../models/car.model';
   providedIn: 'root'
 })
 export class CarService {
-  car = new BehaviorSubject<Car[] | null>(null);
+  cars = new BehaviorSubject<Car[] | null>(null);
 
   constructor(
       private http: HttpClient,) { }
@@ -23,7 +23,7 @@ export class CarService {
       ).pipe(
           catchError(this.handleError), 
           tap(resData => {
-            this.car.next(resData);
+            this.cars.next(resData);
           })
       );
   }
