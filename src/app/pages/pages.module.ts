@@ -6,6 +6,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { AccountComponent } from './account/account.component';
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { EditCarComponent } from './account/edit-car/edit-car.component';
+import { EditAccountComponent } from './account/edit-account/edit-account.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { EditCarComponent } from './account/edit-car/edit-car.component';
     HomeComponent,
     WalletComponent,
     AccountComponent,
-    EditCarComponent
+    EditCarComponent,
+    EditAccountComponent,
   ],
   imports: [
     CommonModule,
