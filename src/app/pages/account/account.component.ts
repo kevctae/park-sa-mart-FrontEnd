@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { Account } from 'src/app/core/models/account.model';
 import { AuthService } from 'src/app/auth/auth.service';
 import { AccountService } from 'src/app/core/services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './account.component.html',
@@ -14,7 +15,8 @@ export class AccountComponent implements OnInit, OnDestroy {
 
   constructor(
     private authService: AuthService,
-    private accountService: AccountService) { }
+    private accountService: AccountService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.initializeAccount();
@@ -28,6 +30,10 @@ export class AccountComponent implements OnInit, OnDestroy {
 
   signOut() {
     this.authService.logout();
+  }
+
+  routeEditCar() {
+    this.router.navigate(['/account/edit-car'], { skipLocationChange: true });
   }
 
   ngOnDestroy() {
