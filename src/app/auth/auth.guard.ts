@@ -30,8 +30,8 @@ export class AuthGuard implements CanActivate {
                 if (isAuth) {
                     return true;
                 }
-                //this.router.navigate(['/auth'], { skipLocationChange: true });
-                return true;
+                this.router.navigate(['/auth'], { skipLocationChange: true });
+                return false;
             }),
             // tap (isAuth => {
             //     this.router.navigate(['/auth']);
