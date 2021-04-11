@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { AuthService } from 'src/app/auth/auth.service';
 import { Car } from '../models/car.model';
 
 @Injectable({
@@ -11,21 +12,27 @@ export class CarService {
   cars = new BehaviorSubject<Car[] | null>(null);
 
   constructor(
-      private http: HttpClient,) { }
+      private http: HttpClient,
+      private authService: AuthService,
+  ) { }
 
-  getCar(email: string, token: string) {
+  getCar() {
+    if (!!this.authService.auth) {
       return this.http.post<Car[]>(
-          'http://somchai09.trueddns.com:43322/returncarlist',
-          {
-              email: email,
-              token: token,
-          }
-      ).pipe(
-          catchError(this.handleError), 
-          tap(resData => {
-            this.cars.next(resData);
-          })
-      );
+        'http://somchai09.trueddns.com:43322/returncarlist',
+        {
+            email: this.authService.auth.email,
+            token: this.authService.auth.token,
+        }
+    ).pipe(
+        catchError(this.handleError), 
+        tap(resData => {
+          this.cars.next(resData);
+        })
+    );
+    } else {
+      return new Observable<Car[]>();
+    }
   }
 
   private handleError(errorRes: HttpErrorResponse) {

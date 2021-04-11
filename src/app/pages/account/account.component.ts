@@ -15,7 +15,7 @@ export class AccountComponent implements OnInit, OnDestroy {
   account: Account | null = null;
   cars: Car[] | null = null;
   account$: Subscription = new Subscription;
-  cars$: Subscription = new Subscription;
+  cars$: Subscription | null = new Subscription;
 
   constructor(
     private authService: AuthService,
@@ -35,7 +35,8 @@ export class AccountComponent implements OnInit, OnDestroy {
   }
 
   initializeCar() {
-    this.cars$ = this.carService.cars.subscribe(cars => {
+    this.carService.getCar();
+    this.cars$ = this.carService.getCar().subscribe(cars => {
       this.cars = cars;
       console.log(cars);
     })

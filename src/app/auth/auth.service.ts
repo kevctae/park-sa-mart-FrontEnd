@@ -17,14 +17,14 @@ export interface AuthResponseData {
   providedIn: 'root'
 })
 export class AuthService {
-  auth = new BehaviorSubject<Auth | null>(null);
+  auth$ = new BehaviorSubject<Auth | null>(null);
+  auth: Auth | null = null;
   private tokenExpirationTimer: any;
 
   constructor(
     private http: HttpClient, 
     private router: Router,
     private accountService: AccountService,
-    private carService: CarService,
     ) { }
 
   signup(email: string, password: string, fname: string, lname: string) {
@@ -89,7 +89,7 @@ export class AuthService {
     if (loadedAuth.token) {
       this.loadData(loadedAuth.email, loadedAuth.token);
 
-      this.auth.next(loadedAuth);
+      this.auth$.next(loadedAuth);
       const expirationDuration =
       new Date(authData._tokenExpirationDate).getTime() -
       new Date().getTime();
@@ -98,7 +98,7 @@ export class AuthService {
   }
 
   logout() {
-    this.auth.next(null);
+    this.auth$.next(null);
     this.accountService.account.next(null);
     this.router.navigate(['/auth'], { skipLocationChange: true });
     localStorage.removeItem('authData');
@@ -122,7 +122,8 @@ export class AuthService {
         token, 
         expirationDate
     );
-    this.auth.next(auth);
+    this.auth = auth;
+    this.auth$.next(auth);
     this.autoLogout(expiresIn * 1000);
     localStorage.setItem('authData', JSON.stringify(auth));
   }
@@ -145,7 +146,5 @@ export class AuthService {
     .subscribe(resData => {
         this.handleAuthentication(email, resData.token, +resData.expiresIn)
     });
-
-    this.carService.getCar(email, token).subscribe();
   }
 }
