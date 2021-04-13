@@ -13,8 +13,8 @@ import { CarService } from 'src/app/core/services/car.service';
 })
 export class AccountComponent implements OnInit, OnDestroy {
   account: Account | null = null;
-  cars: Car[] | null = null;
   account$: Subscription = new Subscription;
+  cars: Car[] | null = null;
   cars$: Subscription | null = new Subscription;
 
   constructor(
@@ -38,7 +38,6 @@ export class AccountComponent implements OnInit, OnDestroy {
     this.carService.getCar();
     this.cars$ = this.carService.getCar().subscribe(cars => {
       this.cars = cars;
-      console.log(cars);
     })
   }
 

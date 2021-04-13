@@ -22,7 +22,7 @@ background: #F8F9FA;
 /* Bar */
 
 
-position: absolute;
+position: fixed;
 height: 80px;
 left: 0px;
 right: 0px;
@@ -693,4 +693,23 @@ margin: 0px 9px;
     .car-thumbnail {
         left: calc(-1 * (320px - (100vw - 40px) / 2));
     }
+}
+
+#footer {
+    /* Parking Info */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    width: 100vw;
+    height: 133px;
+    top: 672px;
+    left: 0%;
+
+    /* Global/07. Light */
 }
