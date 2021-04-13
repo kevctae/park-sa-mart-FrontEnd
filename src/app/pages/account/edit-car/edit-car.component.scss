@@ -22,7 +22,7 @@ background: #F8F9FA;
 /* Bar */
 
 
-position: absolute;
+position: fixed;
 height: 80px;
 left: 0px;
 right: 0px;
@@ -430,7 +430,7 @@ padding: 20px 25px;
 
 position: absolute;
 width: 371px;
-height: 318px;
+height: 378px;
 left: calc(50% - 371px/2);
 top: px;
 
@@ -520,7 +520,7 @@ border-radius: 4.8px;
 flex: none;
 order: 2;
 flex-grow: 0;
-margin: 75px 0px;
+margin: 145px 0px;
 }
 
 #add-license-container{
@@ -693,4 +693,23 @@ margin: 0px 9px;
     .car-thumbnail {
         left: calc(-1 * (320px - (100vw - 40px) / 2));
     }
+}
+
+#footer {
+    /* Parking Info */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    width: 100vw;
+    height: 133px;
+    top: 672px;
+    left: 0%;
+
+    /* Global/07. Light */
 }

@@ -6,6 +6,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { AccountComponent } from './account/account.component';
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { EditCarComponent } from './account/edit-car/edit-car.component';
+import { FormsModule } from '@angular/forms';
 import { EditAccountComponent } from './account/edit-account/edit-account.component';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EditAccountComponent } from './account/edit-account/edit-account.compon
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
-  ]
+    PagesRoutingModule,
+    FormsModule,
+  ],
 })
 export class PagesModule { }
