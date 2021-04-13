@@ -7,16 +7,22 @@
     /* Global/01. Primary */
     background: #11212E;
 }
-#barFrame{
-position: absolute;
-width: 600px;
-height: 90px;
-left: 50%;
-top: 50%;
-margin: -45px 0 0 -300px;
-}
+ #barFrame{
+// /* Group 71 */
+
+
+// position: absolute;
+// width: 411px;
+// height: 24px;
+// left: 20px;
+// top: 28px;
+
+ }
 
 #barArrow{
+/* Icons/Arrow left */
+
+
 position: absolute;
 width: 24px;
 height: 24px;
@@ -56,6 +62,7 @@ position: absolute;
 width: 411px;
 height: 158px;
 left: calc(50% - 411px/2);
+//left: 0;
 top: 100px;
 
 /* Global/01. Primary */
@@ -169,7 +176,7 @@ color: #FFFFFF;
 flex: none;
 order: 1;
 flex-grow: 0;
-margin: 0px 33px;
+margin: 0px 0px;
 }
 
 #card{
@@ -210,6 +217,7 @@ background: #11212E;
 
 border: 1px solid #DFDFDF;
 box-sizing: border-box;
+border-radius: 4px;
 
 /* Inside Auto Layout */
 
@@ -253,7 +261,7 @@ flex-grow: 0;
 margin: 0px 0px;
 }
 
-#card-item{
+.card-item{
     /* Auto Layout */
 
 display: flex;
@@ -280,6 +288,32 @@ align-self: stretch;
 flex-grow: 0;
 margin: 0px 0px;
 }
+#card-content{
+    /* Content */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 12px 20px;
+
+position: static;
+width: 411px;
+height: 48px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
 #card-item-line{
 position: static;
 width: 411px;
@@ -301,20 +335,15 @@ margin: 0px 0px;
 }
 
 #card-item-text{
-    /* Debit Card */
-position: absolute;
+ /* Debit Card */
+
+
+position: static;
 width: 215px;
 height: 24px;
 left: 20px;
 top: 12px;
 
-/* Body/Paragraph */
-
-font-family: SF Pro Display;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
 /* identical to box height, or 150% */
 
 display: flex;
@@ -334,7 +363,10 @@ margin: 0px 0px;
 }
 
 #item-arrow{
-position: relative;
+/* Icons/Arrow right short */
+
+
+position: static;
 width: 24px;
 height: 24px;
 left: 367px;
@@ -347,4 +379,27 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 0px 0px;
+}
+
+@media only screen and (max-width: 411px) {
+    #balance,#balanceFrame ,#card, #card-bar ,.card-item, #card-item-line, #card-content{
+        width: calc(100vw);
+        left: 0px;
+    }
+    // #balanceTHB{
+    //     margin-right: 8vw;
+    // }
+    // #balanceTHB{
+    //     margin-right: 0vw;
+    // }
+    // #balanceMoneyFrame{
+    //     width: calc(100vw-117.5*2);
+    //     margin-right:5vw;
+    // }
+    #item-arrow{
+        // right:4.87vw;
+         margin-right: 0.2vw;
+        // padding-right: 20px;
+    }
+   
 }
