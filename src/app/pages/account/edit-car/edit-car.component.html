@@ -45,35 +45,62 @@
         <div id="add-text">
             <h4 style="margin:0; color: white;">Add Your Car</h4>
         </div>
-        <div id="add-license-container">
-            <div id="license-input-box">
-                <input id="license-text" placeholder="License Plate Number">
+        <form (ngSubmit)="onSubmit(addCarForm)" #addCarForm="ngForm">
+            <div id="add-license-container">
+                <div id="license-input-box">
+                    <input
+                        id="license-text"
+                        placeholder="License Plate Number"
+                        ngModel
+                        name="platenum"
+                        maxlength="7"
+                        required>
+                </div>
+                <div id="license-input-box" style="top: 30px">
+                    <input
+                        id="license-text"
+                        placeholder="Brand"
+                        ngModel
+                        name="brand"
+                        required>
+                </div>
+                <div id="license-input-box" style="top: 60px">
+                    <input
+                        id="license-text"
+                        placeholder="Model"
+                        ngModel
+                        name="model"
+                        required>
+                </div>
+                <div id="license-input-box" style="top: 90px">
+                    <select
+                        class="form-select"
+                        aria-label="Default select example"
+                        ngModel
+                        placeholder="Province"
+                        name="platecity">
+                        <option *ngFor="let province of provinces" [value]="province.PROVINCE_NAME">{{province.PROVINCE_NAME}}</option>
+                </select>
+                </div>
+                <!-- <div id="add-anotherCar-container">
+                    <div id="plus-frame">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 0C5.83136 0 0 5.83136 0 13C0 20.1686 5.83136 26 13 26C20.1686 26 26 20.1676 26 13C26 5.83238 20.1686 0 13 0ZM13 23.9861C6.94307 23.9861 2.01393 19.0579 2.01393 13C2.01393 6.94205 6.94307 2.01393 13 2.01393C19.0569 2.01393 23.9861 6.94205 23.9861 13C23.9861 19.0579 19.0579 23.9861 13 23.9861Z" fill="black"/>
+                            <path d="M18.035 11.9024H14.0071V7.87455C14.0071 7.31869 13.557 6.86755 13.0001 6.86755C12.4432 6.86755 11.9931 7.31869 11.9931 7.87455V11.9024H7.96524C7.40838 11.9024 6.95825 12.3536 6.95825 12.9094C6.95825 13.4653 7.40838 13.9164 7.96524 13.9164H11.9931V17.9443C11.9931 18.5001 12.4432 18.9513 13.0001 18.9513C13.557 18.9513 14.0071 18.5001 14.0071 17.9443V13.9164H18.035C18.5918 13.9164 19.042 13.4653 19.042 12.9094C19.042 12.3536 18.5918 11.9024 18.035 11.9024Z" fill="black"/>
+                        </svg>
+                    </div> 
+                    <div id="add-anotherCar-text">
+                        <p>Add another car</p>
+                    </div>                
+                </div> -->
             </div>
-            <div id="license-input-box" style="top: 30px">
-                <input id="license-text" placeholder="Brand">
-            </div>
-            <div id="license-input-box" style="top: 60px">
-                <input id="license-text" placeholder="Model">
-            </div>
-            <!-- <div id="add-anotherCar-container">
-                <div id="plus-frame">
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 0C5.83136 0 0 5.83136 0 13C0 20.1686 5.83136 26 13 26C20.1686 26 26 20.1676 26 13C26 5.83238 20.1686 0 13 0ZM13 23.9861C6.94307 23.9861 2.01393 19.0579 2.01393 13C2.01393 6.94205 6.94307 2.01393 13 2.01393C19.0569 2.01393 23.9861 6.94205 23.9861 13C23.9861 19.0579 19.0579 23.9861 13 23.9861Z" fill="black"/>
-                        <path d="M18.035 11.9024H14.0071V7.87455C14.0071 7.31869 13.557 6.86755 13.0001 6.86755C12.4432 6.86755 11.9931 7.31869 11.9931 7.87455V11.9024H7.96524C7.40838 11.9024 6.95825 12.3536 6.95825 12.9094C6.95825 13.4653 7.40838 13.9164 7.96524 13.9164H11.9931V17.9443C11.9931 18.5001 12.4432 18.9513 13.0001 18.9513C13.557 18.9513 14.0071 18.5001 14.0071 17.9443V13.9164H18.035C18.5918 13.9164 19.042 13.4653 19.042 12.9094C19.042 12.3536 18.5918 11.9024 18.035 11.9024Z" fill="black"/>
-                    </svg>
-                </div> 
-                <div id="add-anotherCar-text">
-                    <p>Add another car</p>
-                </div>                
-            </div> -->
-        </div>
-       
-            <button type="button" class="add-button">
+            <button type="submit" class="add-button" [disabled]="!addCarForm.valid">
                 <h5 style="color:white; margin:0;">Add</h5>
             </button>
+        </form>
     </div>
 
-    <div id="footer" [style.top.px]="200 * cars.length + 418"></div>
+    <!-- <div id="footer" [style.top.px]="200 * cars.length + 418"></div> -->
 </ng-container>
 
 <div id="bar">
