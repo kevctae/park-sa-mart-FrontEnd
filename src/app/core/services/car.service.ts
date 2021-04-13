@@ -47,4 +47,28 @@ export class CarService {
       }
       return throwError(errorMessage);
   }
+
+  removeCar(car: Car) {
+    if (!!this.authService.auth) {
+      return this.http.post<{
+        email: string,
+        platenum: string,
+        platecity: string,
+        token: string,
+        expiresIn: string,
+      }>(
+        'http://somchai09.trueddns.com:43322/removecar',
+        {
+          token: this.authService.auth.token,  
+          email: this.authService.auth.email,
+          platenum: car.platenum,
+          platecity: car.platecity,
+        }
+    ).pipe(
+        catchError(this.handleError)
+    );
+    } else {
+      return throwError('Not authenticated');
+    }
+  }
 }

@@ -2,7 +2,7 @@
 
 
 <ng-container id="list" *ngIf="cars">
-    <div id="wallpaper" [style.height.px]="500 + 200 * cars.length"> 
+    <div id="wallpaper" [style.height.px]="800 + 200 * cars.length"> 
         <div id="wrapper"></div>
     </div>
     <div *ngFor="let car of cars; let i = index" id="Base" [style.top.px]="200 * i + 100">
@@ -27,7 +27,7 @@
                                 
                         </div>
                     </button> -->
-                    <button type="button" class="btn btn-secondary del-button">
+                    <button type="button" class="btn btn-secondary del-button" (click)="removeCar(car)">
                         <div id="del-frame" style="margin-left: -2px; margin-bottom: 4px;">
                             <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4544 9.05762C14.131 9.05762 13.8689 9.31971 13.8689 9.6431V20.7086C13.8689 21.0318 14.131 21.2941 14.4544 21.2941C14.7778 21.2941 15.0398 21.0318 15.0398 20.7086V9.6431C15.0398 9.31971 14.7778 9.05762 14.4544 9.05762Z" fill="white"/>

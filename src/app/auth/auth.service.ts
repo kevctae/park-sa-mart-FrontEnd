@@ -114,7 +114,7 @@ export class AuthService {
     }, expirationDuration)
   }
 
-  private handleAuthentication(email: string, token: string, expiresIn: number) {    
+  handleAuthentication(email: string, token: string, expiresIn: number) {    
     const expirationDate = new Date(
         new Date().getTime() + expiresIn * 1000);
     const auth = new Auth(
