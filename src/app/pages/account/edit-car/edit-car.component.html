@@ -79,6 +79,7 @@
                         ngModel
                         placeholder="Province"
                         name="platecity">
+                        <option value="" disabled selected>Province</option>
                         <option *ngFor="let province of provinces" [value]="province.PROVINCE_NAME">{{province.PROVINCE_NAME}}</option>
                 </select>
                 </div>
