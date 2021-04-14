@@ -5,6 +5,7 @@ import { Auth } from './auth.model';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { AccountService } from '../core/services/account.service';
+import { CarService } from '../core/services/car.service';
 
 export interface AuthResponseData {
   email: string;
@@ -16,13 +17,14 @@ export interface AuthResponseData {
   providedIn: 'root'
 })
 export class AuthService {
-  auth = new BehaviorSubject<Auth | null>(null);
+  auth$ = new BehaviorSubject<Auth | null>(null);
+  auth: Auth | null = null;
   private tokenExpirationTimer: any;
 
   constructor(
     private http: HttpClient, 
     private router: Router,
-    private accountService: AccountService
+    private accountService: AccountService,
     ) { }
 
   signup(email: string, password: string, fname: string, lname: string) {
@@ -62,10 +64,7 @@ export class AuthService {
           +resData.expiresIn
         );
 
-        this.accountService.getAccount(resData.email, resData.token)
-            .subscribe(resAccData => {
-                this.handleAuthentication(resData.email, resAccData.token, +resAccData.expiresIn)
-        });
+        this.loadData(resData.email, resData.token);
       })
     )
   }
@@ -88,21 +87,18 @@ export class AuthService {
     );
 
     if (loadedAuth.token) {
-        this.accountService.getAccount(loadedAuth.email, loadedAuth.token)
-            .subscribe(resData => {
-                this.handleAuthentication(loadedAuth.email, resData.token, +resData.expiresIn)
-        });
+      this.loadData(loadedAuth.email, loadedAuth.token);
 
-        this.auth.next(loadedAuth);
-        const expirationDuration =
-        new Date(authData._tokenExpirationDate).getTime() -
-        new Date().getTime();
-        this.autoLogout(expirationDuration);
+      this.auth$.next(loadedAuth);
+      const expirationDuration =
+      new Date(authData._tokenExpirationDate).getTime() -
+      new Date().getTime();
+      this.autoLogout(expirationDuration);
     }
   }
 
   logout() {
-    this.auth.next(null);
+    this.auth$.next(null);
     this.accountService.account.next(null);
     this.router.navigate(['/auth'], { skipLocationChange: true });
     localStorage.removeItem('authData');
@@ -118,7 +114,7 @@ export class AuthService {
     }, expirationDuration)
   }
 
-  private handleAuthentication(email: string, token: string, expiresIn: number) {    
+  handleAuthentication(email: string, token: string, expiresIn: number) {    
     const expirationDate = new Date(
         new Date().getTime() + expiresIn * 1000);
     const auth = new Auth(
@@ -126,7 +122,8 @@ export class AuthService {
         token, 
         expirationDate
     );
-    this.auth.next(auth);
+    this.auth = auth;
+    this.auth$.next(auth);
     this.autoLogout(expiresIn * 1000);
     localStorage.setItem('authData', JSON.stringify(auth));
   }
@@ -142,5 +139,12 @@ export class AuthService {
           break;
     }
     return throwError(errorMessage);
+  }
+
+  private loadData(email: string, token: string) {
+    this.accountService.getAccount(email, token)
+    .subscribe(resData => {
+        this.handleAuthentication(email, resData.token, +resData.expiresIn)
+    });
   }
 }
