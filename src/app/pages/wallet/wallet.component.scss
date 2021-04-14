@@ -1,3 +1,25 @@
+#wallpaper {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+}
+
+#wrapper {
+   /* wrapper */
+
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: rgba(5, 5, 5, 0.4);
+}
+
 #background {
     /* backgroundImage */
 
@@ -208,6 +230,7 @@ flex-direction: column;
 align-items: center;
 padding: 0px;
 //!padding
+padding-left: 20%;
 
 position: static;
 width: 70px;
@@ -221,7 +244,7 @@ top: 43px;
 flex: none;
 order: 0;
 flex-grow: 0;
-// margin: 0px 50px;
+margin: 0px 50px;
 }
 
 #top-icon{
@@ -358,7 +381,7 @@ flex-direction: column;
 align-items: center;
 padding: 0px;
 //!padding
-// padding-right: 20%;
+padding-right: 20%;
 
 position: static;
 width: 61px;
@@ -372,7 +395,7 @@ top: 10px;
 flex: none;
 order: 2;
 flex-grow: 0;
-// margin: 0px 50px;
+margin: 0px 50px;
 }
 
 #payment-icon{
@@ -600,7 +623,7 @@ color: #343A40;
 flex: none;
 order: 0;
 flex-grow: 1;
-margin: 0px;
+margin: 0px 9px;
 }
 
 #timeOne{
@@ -629,7 +652,7 @@ color: #343A40;
 flex: none;
 order: 1;
 flex-grow: 1;
-margin: 0px;
+margin: 0px 9px;
 }
 
 #costOne{
@@ -658,7 +681,7 @@ color: #343A40;
 flex: none;
 order: 2;
 flex-grow: 1;
-margin: 0px;
+margin: 0px 9px;
 }
 
 #bottomFrameOne{
@@ -678,7 +701,6 @@ height: 24px;
 left: 20px;
 top: 88px;
 }
-
 #licenseOne{
     /* 1งง 1111 */
 
@@ -705,7 +727,7 @@ color: #343A40;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 0px;
+margin: 0px 0px 0px 9px;
 }
 
 #buildingOne{
@@ -733,9 +755,8 @@ color: #343A40;
 flex: none;
 order: 1;
 flex-grow: 0;
-margin: 0px;
+margin: 0px 0px;
 }
-
 #methodOne{
 /* Paid by Wallet */
 
@@ -764,7 +785,7 @@ color: #343A40;
 flex: none;
 order: 2;
 flex-grow: 0;
-margin: 0px;
+margin: 0px 9px;
 }
 
 #lineOne{
@@ -781,6 +802,9 @@ top: 50px;
 
 border: 3px solid #343A40;
 }
+
+
+
 
 #groupTwo{
   /* Group 2 */
@@ -818,7 +842,8 @@ height: 24px;
 left: 20px;
 top: 132px;
 }
-
+   
+   
 #dateTwo{
 /* 28 Dec 21 */
 
@@ -845,9 +870,9 @@ flex: none;
 order: 0;
 flex-grow: 1;
 margin: 0px 9px;
-}
+   }
    
-#timeTwo{
+   #timeTwo{
 /* 08:41 - 12:22 */
 
 
@@ -876,8 +901,7 @@ order: 1;
 flex-grow: 1;
 margin: 0px 9px;
 }
-
-#costTwo{
+   #costTwo{
 /* 200 Baht */
 
 
@@ -905,10 +929,10 @@ flex: none;
 order: 2;
 flex-grow: 1;
 margin: 0px 9px;
-}
-
-#bottomFrameTwo{
-/* Frame 10 */
+   }
+   
+   #bottomFrameTwo{
+ /* Frame 10 */
 
 
 /* Auto Layout */
@@ -923,8 +947,8 @@ width: 327px;
 height: 24px;
 left: 20px;
 top: 166px;
-}
-#licenseTwo{
+   }
+   #licenseTwo{
 /* 1งง 1111 */
 
 
@@ -950,9 +974,9 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 9px;
-}
-
-#buildingTwo{
+   }
+   
+   #buildingTwo{
 /* Political Science 6th Flr. */
 
 
@@ -979,9 +1003,8 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 0px 9px;
-}
-
-#methodTwo{
+   }
+   #methodTwo{
 /* Paid by Wallet */
 
 
@@ -1009,9 +1032,9 @@ flex: none;
 order: 2;
 flex-grow: 0;
 margin: 0px 9px;
-}
-
-#lineTwo{
+   }
+   
+   #lineTwo{
 /* Line 6 */
 
 
@@ -1024,30 +1047,4 @@ top: 200px;
 /* Global/08. Dark */
 
 border: 3px solid #343A40;
-}
-
-@media only screen and (max-width: 411px) {
-    #balance, #balance-frame, #menu, #activity{
-        width: calc(100vw - 40px);
-        left: 20px;
-    }
-
-    #transfer {
-        margin: 0px 12vw;
-    }
-
-    #frame {
-        width: calc(100vw - 40px);
-    }
-
-    #groupOne, #topFrameOne, #bottomFrameOne, #lineOne {
-        left: 0px;
-        width: calc(100vw - 40px);
-    }
-
-    #dateOne, #timeOne, #costOne, #licenseOne, #buildingOne, #methodOne {
-        // width: calc((100vw - 60px ) / 3);
-        width: auto;
-        margin: auto;
-    }
-}
+   }

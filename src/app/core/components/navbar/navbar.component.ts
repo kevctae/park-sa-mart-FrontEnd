@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,20 +7,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  routeHome() {
-    this.router.navigate(['/home'], { skipLocationChange: true });
-  }
-  
-  routeWallet() {
-    this.router.navigate(['/wallet'], { skipLocationChange: true });
-  }
-
-  routeAccount() {
-    this.router.navigate(['/account'], { skipLocationChange: true });
-  }
 }
