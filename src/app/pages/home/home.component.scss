@@ -84,10 +84,10 @@
 
 
     position: absolute;
-    left: -134.5px;
+    left: calc(-1 * (1280px/2 - 371px/2));
     right: 0%;
-    top: -76.5px;
-    bottom: 0%;
+    top: calc(-1 * (720px/2 - 205px/2));
+    height: auto;
 
     display: block;
     
@@ -398,7 +398,7 @@
     }
 
     .car-thumbnail {
-        left: calc(-1 * (320px - (100vw - 40px) / 2));
+        left: calc(-1 * (640px - (100vw - 40px) / 2));
     }
     
     #info-time, #info-floor, #info-floor-text, #info-fee {
