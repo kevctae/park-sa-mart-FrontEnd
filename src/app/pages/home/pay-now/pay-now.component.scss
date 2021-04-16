@@ -1,0 +1,315 @@
+#bar{
+    /* Bar */
+
+
+position: absolute;
+height: 80px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* Global/01. Primary */
+
+background: #11212E;
+border-radius: 0px 0px 8px 8px;
+}
+
+#barArrow{
+    /* Icons/Arrow left */
+
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 20px;
+top: calc(50% - 24px/2);
+
+}
+
+#barText{
+    /* Payment Methods */
+
+
+position: absolute;
+width: 371px;
+height: 24px;
+left: calc(50% - 371px/2);
+top: calc(50% - 24px/2);
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+}
+#bodyFrame{
+    /* Frame 117 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 371px;
+height: 304px;
+left: calc(50% - 371px/2);
+top: 100px;
+}
+
+.Group{
+    /* Group 67 */
+
+
+position: static;
+width: 371px;
+height: 70px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 8px 0px;
+}
+
+.badge{
+/* Badges/03. Heading/H6 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 3px 4px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 76.97%;
+width: 371px;
+height: 70px;
+
+/* Components/Bradcrumb fill */
+
+background: #E9ECEF;
+border-radius: 8px;
+}
+#Frame1{
+    /* Frame 41 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 76.97%;
+width: 371px;
+height: 70px;
+
+}
+#innerFrame1{
+ /* Frame 111 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 175px;
+height: 50px;
+left: 10px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#license{
+    /* 1งง 1111 */
+
+
+position: static;
+width: 55px;
+height: 20px;
+left: 306px;
+top: 25px;
+
+
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+//margin: 0px 30px;
+margin-right: 10px;
+}
+.profile-image{
+    /* Ellipse 1 */
+
+
+position: static;
+left: 0%;
+right: 70.86%;
+top: 0%;
+bottom: 0%;
+border-radius: 50%;
+width: 51px;
+// height: 50px;
+//background: url(placeholder-profile-sq.jpg);
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+//
+
+// position: static;
+// left: 37.83%;
+// right: 37.83%;
+// top: 0%;
+// bottom: 32.89%;
+// width: 100px;
+// height: 100px;
+// border-radius: 50%;
+// margin: 0 !important;
+
+// /* Inside Auto Layout */
+
+// flex: none;
+// order: 0;
+// flex-grow: 0;
+// margin: 20px 0px;
+}
+#inside-frame{
+ /* Frame 39 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 109px;
+height: 45px;
+left: 66px;
+top: 2.5px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 15px;
+//margin-left: 15px;
+}
+#name{
+    /* THB 500.00 */
+
+
+position: static;
+width: 45px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+#email{
+/* brian.m@chula.ac.th */
+
+
+position: static;
+width: 109px;
+height: 20px;
+left: 0px;
+top: 24px;
+
+// /* Body/Small */
+
+// font-family: SF Pro Display;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 12.8px;
+// line-height: 19px;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+@media only screen and (max-width: 411px) {
+    #barText {
+        width: calc(100vw);
+        left: 0px;
+    }
+    #bodyFrame, #Frame1,.badge,.Group{
+        width: calc(100vw);
+        left: 0px;
+        //margin: 0px 10px;
+    }
+}
