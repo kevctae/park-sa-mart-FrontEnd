@@ -114,6 +114,32 @@ export class AuthService {
     }, expirationDuration)
   }
 
+  editProfile(email: string, old_password: string, password: string, fname: string, lname: string) {
+    return this.http.post<AuthResponseData>(
+      'http://somchai09.trueddns.com:43322/editprofile',
+      {
+        token: this.auth?.token,
+        old_email: this.auth?.email,
+        email: email,
+        old_password: old_password,
+        password: password,
+        fname: fname,
+        lname: lname,
+      }
+    ).pipe(
+      catchError(this.handleError),
+      tap(resData => {
+        this.handleAuthentication(
+          resData.email,
+          resData.token,
+          +resData.expiresIn
+        );
+
+        this.loadData(resData.email, resData.token);
+      })
+    )
+  }
+
   handleAuthentication(email: string, token: string, expiresIn: number) {    
     const expirationDate = new Date(
         new Date().getTime() + expiresIn * 1000);
@@ -136,6 +162,12 @@ export class AuthService {
     switch (errorRes.error.message) {
         case 'INVALID_EMAIL_OR_PASSWORD':
           errorMessage = 'Incorrect email or password';
+          break;
+        case 'EMAIL_EXISTED':
+          errorMessage = 'Changing email is already in used by another user.';
+          break; 
+        case 'CURRENT_EMAIL_OR_PASSWORD_IS_INVALID':
+          errorMessage = 'User’s old email or password is invalid';
           break;
     }
     return throwError(errorMessage);
