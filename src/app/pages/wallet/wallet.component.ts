@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Account } from 'src/app/core/models/account.model';
 import { AccountService } from 'src/app/core/services/account.service';
@@ -11,7 +12,10 @@ export class WalletComponent implements OnInit {
   account: Account | null = null;
   account$: Subscription = new Subscription;
 
-  constructor(private accountService: AccountService) { }
+  constructor(
+    private accountService: AccountService,
+    private router: Router,
+  ) { }
   
 
   ngOnInit(): void {
@@ -26,6 +30,10 @@ export class WalletComponent implements OnInit {
 
   ngOnDestroy() {
     this.account$.unsubscribe();
+  }
+
+  routeTopUp() {
+    this.router.navigate(['/wallet/top-up'],  { skipLocationChange: true });
   }
 
 }
