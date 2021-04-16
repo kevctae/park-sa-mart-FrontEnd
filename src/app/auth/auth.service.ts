@@ -31,10 +31,10 @@ export class AuthService {
     return this.http.post<AuthResponseData>(
         'http://somchai09.trueddns.com:43322/register',
         {
-            email: email,
-            password: password,
-            fname: fname,
-            lname: lname,
+          email: email,
+          password: password,
+          fname: fname,
+          lname: lname,
         }
     ).pipe(
         catchError(this.handleError), 
@@ -71,13 +71,13 @@ export class AuthService {
 
   autoLogin() {
     const authData: {
-        email: string;
-        id: string;
-        _token: string;
-        _tokenExpirationDate: string;
+      email: string;
+      id: string;
+      _token: string;
+      _tokenExpirationDate: string;
     } = JSON.parse(localStorage.getItem('authData') || '{}');
     if (Object.keys(authData).length === 0) {
-        return;
+      return;
     }
 
     const loadedAuth = new Auth(
@@ -103,14 +103,14 @@ export class AuthService {
     this.router.navigate(['/auth'], { skipLocationChange: true });
     localStorage.removeItem('authData');
     if (this.tokenExpirationTimer) {
-        clearTimeout(this.tokenExpirationTimer);
+      clearTimeout(this.tokenExpirationTimer);
     }
     this.tokenExpirationTimer = null;
   }  
 
   autoLogout(expirationDuration: number) {
     this.tokenExpirationTimer = setTimeout(() => {
-        this.logout();
+      this.logout();
     }, expirationDuration)
   }
 
@@ -142,11 +142,11 @@ export class AuthService {
 
   handleAuthentication(email: string, token: string, expiresIn: number) {    
     const expirationDate = new Date(
-        new Date().getTime() + expiresIn * 1000);
+      new Date().getTime() + expiresIn * 1000);
     const auth = new Auth(
-        email,
-        token, 
-        expirationDate
+      email,
+      token, 
+      expirationDate
     );
     this.auth = auth;
     this.auth$.next(auth);
@@ -160,15 +160,15 @@ export class AuthService {
     //     return throwError(errorMessage);
     // }
     switch (errorRes.error.message) {
-        case 'INVALID_EMAIL_OR_PASSWORD':
-          errorMessage = 'Incorrect email or password';
-          break;
-        case 'EMAIL_EXISTED':
-          errorMessage = 'Changing email is already in used by another user.';
-          break; 
-        case 'CURRENT_EMAIL_OR_PASSWORD_IS_INVALID':
-          errorMessage = 'User’s old email or password is invalid';
-          break;
+      case 'INVALID_EMAIL_OR_PASSWORD':
+        errorMessage = 'Incorrect email or password';
+        break;
+      case 'EMAIL_EXISTED':
+        errorMessage = 'Changing email is already in used by another user.';
+        break; 
+      case 'CURRENT_EMAIL_OR_PASSWORD_IS_INVALID':
+        errorMessage = 'User’s old email or password is invalid';
+        break;
     }
     return throwError(errorMessage);
   }
@@ -176,7 +176,7 @@ export class AuthService {
   private loadData(email: string, token: string) {
     this.accountService.getAccount(email, token)
     .subscribe(resData => {
-        this.handleAuthentication(email, resData.token, +resData.expiresIn)
+      this.handleAuthentication(email, resData.token, +resData.expiresIn);
     });
   }
 }

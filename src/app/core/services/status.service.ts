@@ -49,7 +49,7 @@ export class StatusService {
 
   getAvailableSpace() {
     return this.http.get<Space[]>(
-      'http://somchai09.trueddns.com:43322/currentparkingsession',
+      'http://somchai09.trueddns.com:43322/getavailableparkingspace',
     ).pipe(
       catchError(this.handleError),
     )

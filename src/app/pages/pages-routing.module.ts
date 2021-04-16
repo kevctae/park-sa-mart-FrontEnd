@@ -9,44 +9,44 @@ import { TopUpComponent } from "./wallet/top-up/top-up.component";
 import { WalletComponent } from "./wallet/wallet.component";
 
 const routes: Routes = [
-    {
-        path: '',
-        component: NavbarComponent,
-        children: [
-            { 
-                path: '', 
-                redirectTo: 'home' 
-            },
-            { 
-                path: 'home', 
-                component: HomeComponent
-            },
-            { 
-                path: 'wallet', 
-                component: WalletComponent
-            },
-            { 
-                path: 'account', 
-                component: AccountComponent
-            },
-            { 
-                path: 'wallet/top-up', 
-                component: TopUpComponent
-            },
-            {
-                path: 'account/edit-car', 
-                component: EditCarComponent
-            },
-            { 
-                path: 'account/edit-account', 
-                component: EditAccountComponent,
-            },
-        ]
-    }
+  {
+    path: '',
+    component: NavbarComponent,
+    children: [
+      { 
+        path: '', 
+        redirectTo: 'home' 
+      },
+      { 
+        path: 'home', 
+        component: HomeComponent
+      },
+      { 
+        path: 'wallet', 
+        component: WalletComponent
+      },
+      { 
+        path: 'account', 
+        component: AccountComponent
+      },
+      { 
+        path: 'wallet/top-up', 
+        component: TopUpComponent
+      },
+      {
+        path: 'account/edit-car', 
+        component: EditCarComponent
+      },
+      { 
+        path: 'account/edit-account', 
+        component: EditAccountComponent,
+      },
+    ]
+  }
 ] 
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class PagesRoutingModule {}

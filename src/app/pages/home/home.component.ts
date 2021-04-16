@@ -59,10 +59,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.startTimer(new Date(session.entry_datetime));
       }, error => {
         console.log(error)
-        // this.statusService.getAvailableSpace().subscribe(space => {
-        //   console.log(space);
-        //   this.space = space;
-        // });
+        this.statusService.getAvailableSpace().subscribe(space => {
+          console.log(space);
+          this.space = space;
+        });
       })
   }
 

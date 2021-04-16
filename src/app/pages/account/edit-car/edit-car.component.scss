@@ -1,11 +1,12 @@
 #wallpaper{
-    
+  
 position: absolute;
 left: 0%;
 right: 0%;
 top: 0%;
 bottom: 0%;
 }
+
 #wrapper{
 position: absolute;
 left: 0%;
@@ -106,7 +107,7 @@ border-radius: 8px;
 }
 
 #Base-body {
-  /* Cards/x Base/Body */
+/* Cards/x Base/Body */
 
 
 /* Auto Layout */
@@ -131,12 +132,8 @@ flex-grow: 0;
 margin: 0px 0px;
 }
 
-
-
-
-
 #img-frame{
-    /* Content/Image */
+/* Content/Image */
 
 
 position: static;
@@ -156,19 +153,19 @@ margin-bottom: 12px;
 }
 
 .car-thumbnail{
-    /* ff7d9d33-ca03-496c-ab99-a103e3a3c9f4 1 */
+/* ff7d9d33-ca03-496c-ab99-a103e3a3c9f4 1 */
 
 
-   /* Car Thumbnail */
+/* Car Thumbnail */
 
 
-   position: absolute;
-   left: -134.5px;
-   right: 0%;
-   top: -76.5px;
-   bottom: 0%;
+position: absolute;
+left: -134.5px;
+right: 0%;
+top: -76.5px;
+bottom: 0%;
 
-   display: block;
+display: block;
 }
 
 #info-frame{
@@ -198,9 +195,8 @@ flex-grow: 0;
 margin: 0px;
 }
 
-
 #license{
-  
+
 /* ญอ 1717 */
 
 
@@ -438,8 +434,6 @@ background: #444;
 border-radius: 8px;
 }
 
-
-
 #add-text{
     /* Add Your Car */
 
@@ -605,7 +599,6 @@ margin: 0px 0px;
 
 }
 
-
 #add-anotherCar-container{
 /* Frame 30 */
 
@@ -631,6 +624,7 @@ order: 1;
 flex-grow: 0;
 margin: 10px 0px;
 }
+
 #add-anotherCar-text{
 /* Add another car... */
 
@@ -656,6 +650,7 @@ order: 1;
 flex-grow: 0;
 margin: 0px 9px;
 }
+
 #plus-frame{
 /* add 1 */
 
@@ -676,40 +671,40 @@ margin: 0px 9px;
 }
 
 @media only screen and (max-width: 371px) {
-    #barText {
-        width: calc(100vw - 40px);
-        left: 0px;
-    }
+  #barText {
+    width: calc(100vw - 40px);
+    left: 0px;
+  }
 
-    #Base, #Base-body, #img-frame, #info-frame, #add-frame {
-        width: 100vw;
-        left: 0px;
-    }
+  #Base, #Base-body, #img-frame, #info-frame, #add-frame {
+    width: 100vw;
+    left: 0px;
+  }
 
-    #icon-frame {
-        width: calc(100vw - 20px);
-    }
+  #icon-frame {
+    width: calc(100vw - 20px);
+  }
 
-    .car-thumbnail {
-        left: calc(-1 * (320px - (100vw - 40px) / 2));
-    }
+  .car-thumbnail {
+    left: calc(-1 * (320px - (100vw - 40px) / 2));
+  }
 }
 
 #footer {
-    /* Parking Info */
+  /* Parking Info */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    position: absolute;
-    width: 100vw;
-    height: 133px;
-    top: 672px;
-    left: 0%;
+  position: absolute;
+  width: 100vw;
+  height: 133px;
+  top: 672px;
+  left: 0%;
 
-    /* Global/07. Light */
+  /* Global/07. Light */
 }
