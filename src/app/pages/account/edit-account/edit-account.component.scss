@@ -1,0 +1,257 @@
+#header{
+    /* Profile Picture */
+
+
+position: absolute;
+height: 229px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border-radius: 8px;
+}
+#header-rectangle {
+/* Rectangle 1 */
+
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Global/01. Primary */
+
+background: #11212E;
+opacity: 0.6;
+}
+
+#header-component{
+/* Frame 13 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+left: 35.28%;
+right: 35.28%;
+top: 18.56%;
+bottom: 18.56%;
+}
+
+.header-image{
+    /* Ellipse 1 */
+
+
+position: static;
+left: 8.68%;
+right: 8.68%;
+top: 0%;
+bottom: 30.56%;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin: 0 !important;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 20px 0px;
+}
+
+#header-text{
+    /* Brian McNhoi */
+
+
+position: static;
+left: 0%;
+right: 0%;
+top: 83.33%;
+bottom: 0%;
+width: 411px;
+
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration-line: underline;
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 20px 0px;
+}
+
+#rectangle{
+    /* Component 1 */
+
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 229px;
+bottom: 0px;
+
+/* Global/07. Light */
+
+background: #F8F9FA;
+}
+
+#mid{
+    /* Frame 122 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 371px;
+height: 275px;
+left: calc(50% - 371px/2);
+top: 249px;
+}
+
+ .input-group{
+// /* Input group/Left/01. Small */
+
+
+// /* Auto Layout */
+
+// display: flex;
+// flex-direction: row;
+// align-items: center;
+// padding: 0px;
+
+// position: static;
+// width: 371px;
+// height: 35px;
+// left: 0px;
+// top: 0px;
+
+// /* Global/09. White */
+
+// background: #FFFFFF;
+// /* Components/Forms/Input border */
+
+// border: 1px solid #CED4DA;
+// box-sizing: border-box;
+// border-radius: 4px;
+
+// /* Inside Auto Layout */
+
+// flex: none;
+// order: 0;
+// flex-grow: 0;
+ margin: 10px 0px;
+ }
+
+.input-group-text{
+
+/* Input group/x Base/01. Small */
+
+
+/* Auto Layout */
+
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: flex-start;
+// padding: 4px 8px;
+
+// position: static;
+// width: 100px;
+// height: 35px;
+// left: 0px;
+// top: 0px;
+
+// /* Global/01. Primary */
+
+background: #11212E;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+#basic-addon1{
+//     /* Text */
+
+
+// position: static;
+// width: 64px;
+// height: 21px;
+// left: 8px;
+// top: 7px;
+
+/* identical to box height, or 150% */
+
+
+/* Global/09. White */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+.btn-primary{
+    /* Buttons/Filled/03. Large/01. Primary */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+
+position: absolute;
+width: 140px;
+height: 46px;
+left: calc(50% - 140px/2 + 0.5px);
+bottom: 150px;
+
+/* Global/01. Primary */
+
+background: #11212E;
+border-radius: 4.8px;
+}
+@media only screen and (max-width: 411px) {
+    #header-component, #header-text {
+        width: 100vw;
+        left: 0%;
+    }
+    #mid{
+        margin: 0px 20px;
+        left: 0%;
+        width: calc(100vw - 40px);
+        //top: 229px;
+    }
+}
