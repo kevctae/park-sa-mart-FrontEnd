@@ -1,4 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthResponseData, AuthService } from './auth.service';
+
+enum Pages {
+  landingPage,
+  signIn,
+  signUp,
+  guest
+}
 
 @Component({
   templateUrl: './auth.component.html',
@@ -17,9 +28,20 @@ export class AuthComponent implements OnInit {
     return Pages; 
   }
 
-  constructor() { }
+  checkPage(page: number) {
+    return true;
+  }
 
-  ngOnInit(): void {
+  goToLandingPage() {
+    this.page = Pages.landingPage;
+  }
+
+  goToSignIn() {
+    this.page = Pages.signIn;
+  }
+
+  goToSignUp() {
+    this.page = Pages.signUp;
   }
 
   goToGuest() {
