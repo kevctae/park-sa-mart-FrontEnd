@@ -36,7 +36,6 @@ export class EditAccountComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form.value.npassword == '');
     if (form.value.npassword == '') {
       this.editProfile(
         form.value.email,
@@ -61,10 +60,10 @@ export class EditAccountComponent implements OnInit, OnDestroy {
     this.authService.editProfile(email, old_password, password, fname, lname)
       .subscribe(
       resData => {
-          this.router.navigate(['/account'], { skipLocationChange: true });
+        this.router.navigate(['/account'], { skipLocationChange: true });
       },
       errorMessage => {
-          console.log(errorMessage);
+        console.log(errorMessage);
       }
     );
   }

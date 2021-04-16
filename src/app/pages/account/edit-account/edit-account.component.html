@@ -1,83 +1,85 @@
 <div id="header">
-    <div id="header-rectangle"></div>
-    <div id="header-component">
-        <img class="header-image" src="https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image-700x700.jpeg" alt="">
-        <div id="header-text">
-            <u style="margin: auto;">Edit Profile Picture</u>
-        </div>
+  <div id="header-rectangle"></div>
+  <div id="header-component">
+    <img class="header-image" src="https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image-700x700.jpeg" alt="">
+    <div id="header-text">
+      <u style="margin: auto;">Edit Profile Picture</u>
     </div>
+  </div>
 </div>
+
 <div id="rectangle"></div>
+
 <form *ngIf="account" (ngSubmit)="onSubmit(editAccountForm)" #editAccountForm="ngForm">
-    <div id="mid">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">First Name</span>
-            </div>
-            <input
-                type="text"
-                class="form-control"
-                aria-label="First Name"
-                aria-describedby="basic-addon1"
-                [(ngModel)]="account.fname"
-                name="fname"
-                required>
-        </div>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Last Name</span>
-            </div>
-            <input
-                type="text"
-                class="form-control"
-                aria-label="Last Name"
-                aria-describedby="basic-addon1"
-                [(ngModel)]="account.lname"
-                name="lname"
-                required>
-        </div>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">E-mail</span>
-            </div>
-            <input
-                type="text"
-                class="form-control"
-                aria-label="E-mail"
-                aria-describedby="basic-addon1"
-                [(ngModel)]="account.email"
-                name="email"
-                email
-                required>
-        </div>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">New Password</span>
-            </div>
-            <input
-                type="password"
-                class="form-control"
-                aria-label="New Password"
-                aria-describedby="basic-addon1"
-                ngModel
-                name="npassword">
-        </div>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Password (Required)</span>
-            </div>
-            <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-                aria-label="Password"
-                aria-describedby="basic-addon1"
-                ngModel
-                name="password"
-                required>
-        </div>
+  <div id="mid">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">First Name</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="First Name"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="account.fname"
+        name="fname"
+        required>
     </div>
-    <button [disabled]="!editAccountForm.valid" type="submit" class="btn btn-primary">Save</button>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Last Name</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Last Name"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="account.lname"
+        name="lname"
+        required>
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">E-mail</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="E-mail"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="account.email"
+        name="email"
+        email
+        required>
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">New Password</span>
+      </div>
+      <input
+        type="password"
+        class="form-control"
+        aria-label="New Password"
+        aria-describedby="basic-addon1"
+        ngModel
+        name="npassword">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Password (Required)</span>
+      </div>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        aria-label="Password"
+        aria-describedby="basic-addon1"
+        ngModel
+        name="password"
+        required>
+    </div>
+  </div>
+  <button [disabled]="!editAccountForm.valid" type="submit" class="btn btn-primary">Save</button>
 </form>
-    
+  
 

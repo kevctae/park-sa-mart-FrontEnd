@@ -12,8 +12,8 @@ export class CarService {
   cars = new BehaviorSubject<Car[] | null>(null);
 
   constructor(
-      private http: HttpClient,
-      private authService: AuthService,
+    private http: HttpClient,
+    private authService: AuthService,
   ) { }
 
   getCar() {
@@ -21,8 +21,8 @@ export class CarService {
       return this.http.post<Car[]>(
         'http://somchai09.trueddns.com:43322/returncarlist',
         {
-            email: this.authService.auth.email,
-            token: this.authService.auth.token,
+          email: this.authService.auth.email,
+          token: this.authService.auth.token,
         }
     ).pipe(
         catchError(this.handleError), 
@@ -41,12 +41,12 @@ export class CarService {
       //     return throwError(errorMessage);
       // }
       switch (errorRes.error.message) {
-          case 'NO_CAR_OWNED':
-              errorMessage = 'The email user owns no car';
-              break;
-          case 'CAR_OWNED': 
-              errorMessage = 'The car is owned'
-              break;
+        case 'NO_CAR_OWNED':
+          errorMessage = 'The email user owns no car';
+          break;
+        case 'CAR_OWNED': 
+          errorMessage = 'The car is owned'
+          break;
       }
       return throwError(errorMessage);
   }

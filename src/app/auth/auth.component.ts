@@ -26,7 +26,7 @@ export class AuthComponent implements OnInit {
 
   public get Pages() {
     return Pages; 
- }
+  }
 
   checkPage(page: number) {
     return true;
@@ -70,12 +70,12 @@ export class AuthComponent implements OnInit {
     authObs = this.authService.login(email, password);
     authObs.subscribe(
       resData => {
-          this.isLoading = false;
-          this.router.navigate(['/home'], { skipLocationChange: true });
+        this.isLoading = false;
+        this.router.navigate(['/home'], { skipLocationChange: true });
       },
       errorMessage => {
-          this.error = errorMessage;
-          this.isLoading = false;
+        this.error = errorMessage;
+        this.isLoading = false;
       }
     );
   }
@@ -86,12 +86,12 @@ export class AuthComponent implements OnInit {
     authObs = this.authService.signup(email, password, fname, lname);
     authObs.subscribe(
       resData => {
-          this.isLoading = false;
-          this.router.navigate(['/home'], { skipLocationChange: true });
+        this.isLoading = false;
+        this.router.navigate(['/home'], { skipLocationChange: true });
       },
       errorMessage => {
-          this.error = errorMessage;
-          this.isLoading = false;
+        this.error = errorMessage;
+        this.isLoading = false;
       }
     );
   }

@@ -35,7 +35,6 @@ export class AccountComponent implements OnInit, OnDestroy {
   }
 
   initializeCar() {
-    this.carService.getCar();
     this.cars$ = this.carService.getCar().subscribe(cars => {
       this.cars = cars;
     }, () => {
