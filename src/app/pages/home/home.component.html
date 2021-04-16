@@ -8,10 +8,10 @@
   </div>
 </div>
 
-<div id="car-box" *ngIf="session">
+<div id="car-box">
   <img
     class="car-thumbnail"
-    [src]="session.entry_picture">
+    [src]="session ? session.entry_picture : 'https://www.chula.ac.th/wp-content/uploads/2018/01/chula-faculty-political-science-hero-desktop.jpg'">
 </div>
 
 <div id="info-box" *ngIf="session">
@@ -49,4 +49,18 @@
   </div>
 </div>
 
+<div id="info-box-space" *ngIf="!session && spaces" [style.height.px]="48 * spaces.length + 64">
+  <div id="info-time-label">
+    <div id="info-time-label-text" style="top: 0px">
+      <h5 style="margin: 0px;">{{spaces[0].building}}</h5>
+    </div>
+  </div>
+
+  <div id="info-fee" *ngFor="let space of spaces">
+    <p id="info-fee-amount" style="margin: 0px;">Floor: {{space.floor}}</p>
+    <p id="info-fee-pay" style="margin: 0px;">Space: {{space.available_space}}</p>
+  </div>
+</div>
+
+<div id="footer" *ngIf="spaces" [style.top.px]="50 * spaces.length + 672 - 250"></div>
 <div id="footer"></div>

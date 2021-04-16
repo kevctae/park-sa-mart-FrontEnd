@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   account$: Subscription = new Subscription;
   session: Session | null = null;
   session$: Subscription = new Subscription;
-  space: Space[] | null = null;
+  spaces: Space[] | null = null;
   space$: Subscription = new Subscription;
   counter: any | null = null;
   timerRef: any;
@@ -59,9 +59,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.startTimer(new Date(session.entry_datetime));
       }, error => {
         console.log(error)
-        this.statusService.getAvailableSpace().subscribe(space => {
-          console.log(space);
-          this.space = space;
+        this.statusService.getAvailableSpace().subscribe(spaces => {
+          this.spaces = spaces;
         });
       })
   }
