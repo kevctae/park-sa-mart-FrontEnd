@@ -8,37 +8,76 @@
     </div>
 </div>
 <div id="rectangle"></div>
-<div id="mid">
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">First Name</span>
+<form *ngIf="account" (ngSubmit)="onSubmit(editAccountForm)" #editAccountForm="ngForm">
+    <div id="mid">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">First Name</span>
+            </div>
+            <input
+                type="text"
+                class="form-control"
+                aria-label="First Name"
+                aria-describedby="basic-addon1"
+                [(ngModel)]="account.fname"
+                name="fname"
+                required>
         </div>
-        <input type="text" class="form-control" placeholder="Brian" aria-label="First Name" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Last Name</span>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Last Name</span>
+            </div>
+            <input
+                type="text"
+                class="form-control"
+                aria-label="Last Name"
+                aria-describedby="basic-addon1"
+                [(ngModel)]="account.lname"
+                name="lname"
+                required>
         </div>
-        <input type="text" class="form-control" placeholder="McNhoi" aria-label="Last Name" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">E-mail</span>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">E-mail</span>
+            </div>
+            <input
+                type="text"
+                class="form-control"
+                aria-label="E-mail"
+                aria-describedby="basic-addon1"
+                [(ngModel)]="account.email"
+                name="email"
+                email
+                required>
         </div>
-        <input type="text" class="form-control" placeholder="brian.m@chula.ac.th" aria-label="E-mail" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Old Password</span>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">New Password</span>
+            </div>
+            <input
+                type="password"
+                class="form-control"
+                aria-label="New Password"
+                aria-describedby="basic-addon1"
+                ngModel
+                name="npassword">
         </div>
-        <input type="text" class="form-control" placeholder="Password" aria-label="Old Password" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">New Password</span>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Password (Required)</span>
+            </div>
+            <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                aria-label="Password"
+                aria-describedby="basic-addon1"
+                ngModel
+                name="password"
+                required>
         </div>
-        <input type="text" class="form-control" placeholder="Password" aria-label="New Password" aria-describedby="basic-addon1">
     </div>
-</div>
-<button type="button" class="btn-primary">Save</button>
+    <button [disabled]="!editAccountForm.valid" type="submit" class="btn btn-primary">Save</button>
+</form>
+    
 
