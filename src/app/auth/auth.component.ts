@@ -5,10 +5,72 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+  page: Pages = Pages.landingPage;
+  isLoading = false;
+  error: string | null = null;
+
+  constructor(private authService: AuthService, private router: Router) { }
+
+  ngOnInit(): void { }
+
+  public get Pages() {
+    return Pages; 
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  goToGuest() {
+    this.page = Pages.guest;
+  }
+
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return;
+    }
+
+    switch (this.page) {
+      case Pages.signIn:
+        this.signIn(form.value.email, form.value.password);
+        break;
+      case Pages.signUp:
+        this.signUp(form.value.email, form.value.password, form.value.fname, form.value.lname);
+    }
+
+    form.reset();
+  }
+
+  private signIn(email: string, password: string) {
+    let authObs: Observable<AuthResponseData>;
+    this.isLoading = true;
+    authObs = this.authService.login(email, password);
+    authObs.subscribe(
+      resData => {
+        this.isLoading = false;
+        this.router.navigate(['/home'], { skipLocationChange: true });
+      },
+      errorMessage => {
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    );
+  }
+
+  private signUp(email: string, password: string, fname: string, lname: string) {
+    let authObs: Observable<AuthResponseData>;
+    this.isLoading = true;
+    authObs = this.authService.signup(email, password, fname, lname);
+    authObs.subscribe(
+      resData => {
+        this.isLoading = false;
+        this.router.navigate(['/home'], { skipLocationChange: true });
+      },
+      errorMessage => {
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    );
+  }
 }

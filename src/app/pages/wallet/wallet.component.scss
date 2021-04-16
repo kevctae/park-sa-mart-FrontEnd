@@ -21,41 +21,41 @@
 }
 
 #background {
-    /* backgroundImage */
+  /* backgroundImage */
 
 
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
 }
 
 #balance {
-    /* Wallet Balance */
+  /* Wallet Balance */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 
-    position: absolute;
-    width: 371px;
-    height: 219px;
-    left: calc(50% - 371px/2);
-    top: 20px;
+  position: absolute;
+  width: 371px;
+  height: 219px;
+  left: calc(50% - 371px/2);
+  top: 20px;
 
-    /* Global/02. Secondary */
+  /* Global/02. Secondary */
 
-    background: #6C757D;
-    mix-blend-mode: lighten;
-    border-radius: 8px;
+  background: #6C757D;
+  mix-blend-mode: lighten;
+  border-radius: 8px;
 }
 #balance-frame{
-    /* Frame 126 */
+  /* Frame 126 */
 
 
 /* Auto Layout */
@@ -248,7 +248,7 @@ margin: 0px 50px;
 }
 
 #top-icon{
-    /* Icons/Box arrow in up */
+  /* Icons/Box arrow in up */
 
 
 position: static;
@@ -266,7 +266,7 @@ flex-grow: 0;
 margin: 10px 0px;
 }
 #top-text{
-    /* Top Up */
+  /* Top Up */
 
 
 position: static;
@@ -702,7 +702,7 @@ left: 20px;
 top: 88px;
 }
 #licenseOne{
-    /* 1งง 1111 */
+  /* 1งง 1111 */
 
 
 position: static;
@@ -731,7 +731,7 @@ margin: 0px 0px 0px 9px;
 }
 
 #buildingOne{
-    /* Political Science 6th Flr. */
+  /* Political Science 6th Flr. */
 
 
 position: relative;
@@ -789,7 +789,7 @@ margin: 0px 9px;
 }
 
 #lineOne{
-    /* Line 6 */
+  /* Line 6 */
 
 
 position: relative;
@@ -1047,4 +1047,30 @@ top: 200px;
 /* Global/08. Dark */
 
 border: 3px solid #343A40;
-   }
+}
+
+@media only screen and (max-width: 411px) {
+  #balance, #balance-frame, #menu, #activity{
+    width: calc(100vw - 40px);
+    left: 20px;
+  }
+
+  #transfer {
+    margin: 0px 12vw;
+  }
+
+  #frame {
+    width: calc(100vw - 40px);
+  }
+
+  #groupOne, #topFrameOne, #bottomFrameOne, #lineOne {
+    left: 0px;
+    width: calc(100vw - 40px);
+  }
+
+  #dateOne, #timeOne, #costOne, #licenseOne, #buildingOne, #methodOne {
+    // width: calc((100vw - 60px ) / 3);
+    width: auto;
+    margin: auto;
+  }
+}

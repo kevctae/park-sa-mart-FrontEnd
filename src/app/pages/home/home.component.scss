@@ -1,430 +1,456 @@
 @import "src/styles.scss";
 
 #profile-box {
-    /* Profile */
+  /* Profile */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 
-    position: absolute;
-    width: 223px;
-    height: 36px;
-    left: 20px;
-    top: 20px;
+  position: absolute;
+  width: 223px;
+  height: 36px;
+  left: 20px;
+  top: 20px;
 }
 
 .profile-icon {
-    /* Ellipse 1 */
+  /* Ellipse 1 */
 
 
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    left: 0px;
-    top: 0px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 0px;
+  top: 0px;
 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
 }
 
 #profile-text {
-    /* Good Morning, Brian */
+  /* Good Morning, Brian */
 
 
-    position: absolute;
-    width: calc(100vw - 86px);
-    height: 24px;
-    left: calc(50% - 177px/2 + 23px);
-    top: calc(50% - 24px/2);
+  position: absolute;
+  width: calc(100vw - 86px);
+  height: 24px;
+  left: calc(50% - 177px/2 + 23px);
+  top: calc(50% - 24px/2);
 
-    /* identical to box height, or 120% */
+  /* identical to box height, or 120% */
 
-    /* Global/07. Light */
+  /* Global/07. Light */
 
-    color: #F8F9FA;
+  color: #F8F9FA;
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 #car-box {
-    /* Car Thumbnail */
+  /* Car Thumbnail */
 
 
-    position: absolute;
-    width: 371px;
-    height: 205px;
-    left: calc(50% - 371px/2);
-    top: 76px;
-    overflow: hidden;
-    border-radius: 8px;
+  position: absolute;
+  width: 371px;
+  height: 205px;
+  left: calc(50% - 371px/2);
+  top: 76px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .car-thumbnail {
-    /* Car Thumbnail */
+  /* Car Thumbnail */
 
 
-    position: absolute;
-    left: -134.5px;
-    right: 0%;
-    top: -76.5px;
-    bottom: 0%;
+  position: absolute;
+  left: calc(-1 * (1280px/2 - 371px/2));
+  right: 0%;
+  top: calc(-1 * (720px/2 - 205px/2));
+  height: auto;
 
-    display: block;
-    
+  display: block;
+  
 }
 
 #info-box {
-    /* Parking Info */
+  /* Parking Info */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
 
-    position: absolute;
-    width: 371px;
-    height: 351px;
-    left: calc(50% - 371px/2);
-    top: 301px;
+  position: absolute;
+  width: 371px;
+  height: 351px;
+  left: calc(50% - 371px/2);
+  top: 301px;
 
-    /* Global/07. Light */
+  /* Global/07. Light */
 
-    background: theme-color("light");
-    mix-blend-mode: lighten;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+  background: theme-color("light");
+  mix-blend-mode: lighten;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+#info-box-space {
+  /* Parking Info */
+
+
+  /* Auto Layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+
+  position: absolute;
+  width: 371px;
+  height: 351px;
+  left: calc(50% - 371px/2);
+  top: 301px;
+
+  /* Global/07. Light */
+
+  background: theme-color("light");
+  mix-blend-mode: lighten;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 
 #info-time-label {
-    /* Title */
+  /* Title */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
+  display: flex;
+  //flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
 
-    position: static;
-    width: 149px;
-    height: 24px;
-    left: 20px;
-    top: 20px;
+  position: static;
+  width: 75%;
+  height: 24px;
+  left: 20px;
+  top: 20px;
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px;
 }
 
 #info-time-label-icon {
-    /* Icons/Clock */
+  /* Icons/Clock */
 
 
-    position: static;
-    width: 24px;
-    height: 24px;
-    left: 0px;
-    top: 0px;
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 #info-time-label-text {
-    /* Time Entered */
+  /* Time Entered */
 
 
-    position: static;
-    width: 120px;
-    height: 24px;
-    left: 34px;
-    top: 0px;
+  position: static;
+  width: 120px;
+  height: 24px;
+  left: 34px;
+  top: 0px;
+  white-space: nowrap;
 
-    /* identical to box height, or 120% */
+  /* identical to box height, or 120% */
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    /* Global/08. Dark */
+  /* Global/08. Dark */
 
-    color: theme-color("body");
+  color: theme-color("body");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 10px;
 }
 
 #info-time {
-    /* 08:58:46 */
+  /* 08:58:46 */
 
 
-    position: static;
-    width: 330px;
-    height: 48px;
-    left: 20px;
-    top: 56px;
+  position: static;
+  width: 330px;
+  height: 48px;
+  left: 20px;
+  top: 56px;
 
-    /* identical to box height, or 120% */
+  /* identical to box height, or 120% */
 
-    display: flex;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-    /* Text/01. Body */
+  /* Text/01. Body */
 
-    color: theme-color("body");
+  color: theme-color("body");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 12px 0px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 12px 0px;
 }
 
 #info-floor-label {
-    /* You parked on: */
+  /* You parked on: */
 
 
-    position: static;
-    width: 109px;
-    height: 20px;
-    left: 20px;
-    top: 116px;
+  position: static;
+  width: 109px;
+  height: 20px;
+  left: 20px;
+  top: 116px;
 
-    /* identical to box height, or 120% */
+  /* identical to box height, or 120% */
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    /* Text/01. Body */
+  /* Text/01. Body */
 
-    color: theme-color("body");
+  color: theme-color("body");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
 }
 
 #info-floor {
-    /* 5th */
+  /* 5th */
 
 
-    position: static;
-    width: 330px;
-    height: 106px;
-    left: 20px;
-    top: 148px;
+  position: static;
+  width: 330px;
+  height: 106px;
+  left: 20px;
+  top: 148px;
 
-    /* Display/Display 2 */
+  /* Display/Display 2 */
 
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 88px;
-    line-height: 106px;
-    /* identical to box height, or 120% */
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 88px;
+  line-height: 106px;
+  /* identical to box height, or 120% */
 
-    display: flex;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-    /* Text/01. Body */
+  /* Text/01. Body */
 
-    color: theme-color("body");
+  color: theme-color("body");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 3;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 12px 0px;
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 12px 0px;
 }
 
 #info-floor-text {
-    /* Floor */
+  /* Floor */
 
 
-    position: static;
-    width: 330px;
-    height: 24px;
-    left: 20px;
-    top: 266px;
+  position: static;
+  width: 330px;
+  height: 24px;
+  left: 20px;
+  top: 266px;
 
-    /* identical to box height, or 120% */
+  /* identical to box height, or 120% */
 
-    display: flex;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-    color: theme-color("body");
+  color: theme-color("body");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 4;
-    align-self: stretch;
-    flex-grow: 0;
+  flex: none;
+  order: 4;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 #info-fee {
-    /* Links */
+  /* Links */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
 
-    position: static;
-    width: 330px;
-    height: 24px;
-    left: 20px;
-    top: 302px;
+  position: static;
+  width: 330px;
+  height: 24px;
+  left: 20px;
+  top: 302px;
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 5;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 12px 0px;
+  flex: none;
+  order: 5;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 12px 0px;
 }
 
 #info-fee-amount {
-        /* Total: 135 Baht */
+    /* Total: 135 Baht */
 
 
-    position: static;
-    width: 253px;
-    height: 24px;
-    left: 0px;
-    top: 0px;
+  position: static;
+  width: 253px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
 
-    /* identical to box height, or 150% */
+  /* identical to box height, or 150% */
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    /* Global/02. Secondary */
+  /* Global/02. Secondary */
 
-    color: theme-color("muted");
+  color: theme-color("muted");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 0;
+  flex: none;
+  order: 0;
 }
 
 #info-fee-pay {
-    /* Pay now */
+  /* Pay now */
 
 
-    position: static;
-    width: 70px;
-    height: 24px;
-    left: 273px;
-    top: 0px;
+  position: static;
+  width: 70px;
+  height: 24px;
+  left: 273px;
+  top: 0px;
 
-    /* identical to box height, or 150% */
+  /* identical to box height, or 150% */
 
-    display: flex;
-    align-items: center;
-    text-decoration-line: underline;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
 
-    /* Text/02. Muted */
+  /* Text/02. Muted */
 
-    color: theme-color("muted");
+  color: theme-color("muted");
 
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 1;
+  flex: none;
+  order: 1;
 }
 
 @media only screen and (max-width: 411px) {
-    #car-box, #info-box {
-        width: calc(100vw - 40px);
-        left: 20px;
-    }
+  #car-box, #info-box, #info-box-space {
+    width: calc(100vw - 40px);
+    left: 20px;
+  }
 
-    .car-thumbnail {
-        left: calc(-1 * (320px - (100vw - 40px) / 2));
-    }
-    
-    #info-time, #info-floor, #info-floor-text, #info-fee {
-        width: calc(100vw - 80px);
-    }
-    
-    #info-fee-amount {
-        width: calc(100vw - 150px);
-    }
+  .car-thumbnail {
+    left: calc(-1 * (640px - (100vw - 40px) / 2));
+  }
+  
+  #info-time, #info-floor, #info-floor-text, #info-fee {
+    width: calc(100vw - 80px);
+  }
+  
+  #info-fee-amount {
+    width: calc(100vw - 150px);
+  }
 }
 
 #footer {
-    /* Parking Info */
+  /* Parking Info */
 
 
-    /* Auto Layout */
+  /* Auto Layout */
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    position: absolute;
-    width: 100vw;
-    height: 133px;
-    top: 672px;
-    left: 0%;
+  position: absolute;
+  width: 100vw;
+  height: 133px;
+  top: 672px;
+  left: 0%;
 
-    /* Global/07. Light */
+  /* Global/07. Light */
 }

@@ -5,20 +5,35 @@ import { Observable } from "rxjs";
 @Injectable({providedIn: 'root'})
 export class AuthGuard implements CanActivate {
 
-    constructor(
-        private router: Router
-    ) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+  ) {}
 
-    canActivate(
-        route: ActivatedRouteSnapshot, 
-        router: RouterStateSnapshot
-    ): boolean | UrlTree | Promise<boolean | UrlTree> | Observable<boolean | UrlTree> {
-        let loggedIn: boolean = true;
+  canActivate(
+    route: ActivatedRouteSnapshot, 
+    router: RouterStateSnapshot
+  ): boolean | UrlTree | Promise<boolean | UrlTree> | Observable<boolean | UrlTree> {
+    // let loggedIn: boolean = true;
 
-        if (!loggedIn) {
-            return this.router.createUrlTree(['/auth']);
+    // if (!loggedIn) {
+    //   return this.router.createUrlTree(['/auth']);
+    // }
+
+    // return true;
+    return this.authService.auth$.pipe(
+      take(1),
+      map(user => {
+        const isAuth = !!user;
+        if (isAuth) {
+          return true;
         }
-
-        return true;
-    }
+        this.router.navigate(['/auth'], { skipLocationChange: true });
+        return false;
+      }),
+      // tap (isAuth => {
+      //   this.router.navigate(['/auth']);
+      // })
+    );
+  }
 }

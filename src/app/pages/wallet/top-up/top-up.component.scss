@@ -1,0 +1,398 @@
+#bar{
+  position: absolute;
+  height: 80px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  /* Global/01. Primary */
+  background: #11212E;
+}
+
+#barArrow{
+  /* Icons/Arrow left */
+
+
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 20px;
+  top: calc(50% - 24px/2);
+}
+
+#barText{
+
+  position: absolute;
+  width: 371px;
+  height: 24px;
+  left: calc(50% - 371px/2);
+  top: 28px;
+
+  /* identical to box height, or 120% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Global/09. White */
+
+  color: #FFFFFF;
+}
+
+#balance{
+      /* Auto Layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 411px;
+  height: 158px;
+  left: calc(50% - 411px/2);
+  //left: 0;
+  top: 100px;
+
+  /* Global/01. Primary */
+
+  background: #11212E;
+
+}
+
+#balanceFrame{
+      /* Auto Layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  position: static;
+  width: 411px;
+  height: 117px;
+  left: 0px;
+  top: 20.5px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 30px 0px;
+  color:#fff;
+}
+
+#balanceMoneyFrame{
+      /* Auto Layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  position: static;
+  width: 306px;
+  height: 68px;
+  left: 117.5px;
+  top: 49px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 20px 0px;
+}
+
+#balanceTHB{
+  position: static;
+  width: 104px;
+  height: 68px;
+  left: 72px;
+  top: 0px;
+
+  /* Display/Display 4 */
+
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 67px;
+  /* identical to box height, or 120% */
+
+  text-align: center;
+
+  /* Global/09. White */
+
+  color: #FFFFFF;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 33px;
+}
+
+#balanceXXX{
+  position: static;
+  width: 104px;
+  height: 68px;
+  left: 72px;
+  top: 0px;
+
+  /* Display/Display 4 */
+
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 67px;
+  /* identical to box height, or 120% */
+
+  text-align: center;
+
+  /* Global/09. White */
+
+  color: #FFFFFF;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+#card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  
+  position: absolute;
+  width: 411px;
+  height: 195px;
+  left: calc(50% - 411px/2 - 1px);
+  top: 278px;
+  
+  /* Components/Card border */
+  
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+#card-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 20px;
+
+  position: static;
+  width: 411px;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+
+  /* Global/01. Primary */
+
+  background: #11212E;
+  /* Components/Card border */
+
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+#card-bar-text{
+  /* Featured */
+  position: static;
+  width: 215px;
+  height: 24px;
+  left: 20px;
+  top: 12px;
+
+  /* Body/Paragraph */
+
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  /* Global/09. White */
+
+  color: #FFFFFF;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+.card-item{
+      /* Auto Layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: relative;
+  width: 411px;
+  height: 49px;
+  left: 0px;
+  top: 0px;
+
+  /* Global/09. White */
+  background: #FFFFFF;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+
+  border-radius: 4px;
+}
+
+#card-content{
+    /* Content */
+
+
+  /* Auto Layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+
+  position: static;
+  width: 411px;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+#card-item-line{
+  position: static;
+  width: 411px;
+  height: 1px;
+  left: 0px;
+  top: 48px;
+
+  /* Components/Card border */
+
+  background: #DFDFDF;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+#card-item-text{
+  /* Debit Card */
+
+
+  position: static;
+  width: 215px;
+  height: 24px;
+  left: 20px;
+  top: 12px;
+
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  /* Text/01. Body */
+
+  color: #212529;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+#item-arrow{
+  /* Icons/Arrow right short */
+
+
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 367px;
+  top: 12px;
+
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+@media only screen and (max-width: 411px) {
+  #balance,#balanceFrame ,#card, #card-bar ,.card-item, #card-item-line, #card-content, #barText, #balanceMoneyFrame{
+    width: calc(100vw);
+    left: 0px;
+  }
+  // #balanceTHB{
+  //     margin-right: 8vw;
+  // }
+  // #balanceTHB{
+  //     margin-right: 0vw;
+  // }
+  // #balanceMoneyFrame{
+  //     width: calc(100vw-117.5*2);
+  //     margin-right:5vw;
+  // }
+  #item-arrow{
+    // right:4.87vw;
+      margin-right: 0.2vw;
+    // padding-right: 20px;
+  }
+   
+}
