@@ -1,3 +1,17 @@
+#wrapper{
+    /* wrapper */
+
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Global/07. Light */
+
+background: #F8F9FA;
+}
 #bar{
     /* Bar */
 
@@ -83,7 +97,7 @@ flex-grow: 0;
 margin: 8px 0px;
 }
 
-.badge{
+#badge1{
 /* Badges/03. Heading/H6 */
 
 
@@ -158,7 +172,7 @@ margin: 0px 10px;
 
 
 position: static;
-width: 55px;
+width: 70px;
 height: 20px;
 left: 306px;
 top: 25px;
@@ -176,8 +190,8 @@ color: #000000;
 flex: none;
 order: 1;
 flex-grow: 0;
-//margin: 0px 30px;
-margin-right: 10px;
+margin: 0px 0px;
+//margin-right: 10px;
 }
 .profile-image{
     /* Ellipse 1 */
@@ -302,12 +316,604 @@ order: 1;
 flex-grow: 0;
 margin: 0px 0px;
 }
-@media only screen and (max-width: 411px) {
+#badge2{
+    /* Badges/03. Heading/H6 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 3px 4px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 25.66%;
+bottom: 51.32%;
+
+/* Components/Bradcrumb fill */
+
+background: #E9ECEF;
+border-radius: 8px;
+}
+#Frame2{
+    /* Frame 41 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 25.66%;
+bottom: 51.32%;
+
+}
+#innerFrame2{
+ /* Frame 112 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 159px;
+height: 30px;
+left: 10px;
+top: 20px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#enter-icon{
+    /* enter 1 */
+
+
+position: static;
+width: 30px;
+height: 30px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+}
+#enter-text{
+    /* Time entered */
+
+
+position: static;
+width: 160px;
+height: 24px;
+left: 45px;
+top: 3px;
+
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+#time-enter{
+    /* 08:58:46 */
+
+
+position: static;
+width: 70px;
+height: 20px;
+left: 306px;
+top: 25px;
+
+
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+//margin-right: 12px;
+}
+
+#badge3{
+/* Badges/03. Heading/H6 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 3px 4px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 51.32%;
+bottom: 25.66%;
+
+/* Components/Bradcrumb fill */
+
+background: #E9ECEF;
+border-radius: 8px;
+}
+#Frame3{
+/* Frame 41 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 51.32%;
+bottom: 25.66%;
+}
+#innerFrame3{
+/* Frame 113 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 159px;
+height: 30px;
+left: 10px;
+top: 20px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#exit-icon{
+/* logout 1 */
+
+
+position: static;
+width: 30px;
+height: 30px;
+left: 0px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+
+#exit-text{
+
+   /* Time entered */
+
+
+   position: static;
+   width: 150px;
+   height: 24px;
+   left: 45px;
+   top: 3px;
+   
+   
+   /* identical to box height, or 120% */
+   
+   display: flex;
+   align-items: center;
+   text-align: center;
+   
+   color: #000000;
+   
+   
+   
+   /* Inside Auto Layout */
+   
+   flex: none;
+   order: 1;
+   flex-grow: 0;
+   margin: 0px 0px;
+//  /* Time exited */
+
+
+// position: static;
+// width: 150px;
+// height: 24px;
+// left: 45px;
+// top: 3px;
+
+
+// /* identical to box height, or 120% */
+
+// display: flex;
+// align-items: center;
+// text-align: center;
+
+// color: #000000;
+
+
+// /* Inside Auto Layout */
+
+// flex: none;
+// order: 1;
+// flex-grow: 0;
+// margin: 0px 0px;
+}
+#time-exit{
+    /* 12:02:27 */
+
+
+position: static;
+width: 70px;
+height: 20px;
+left: 306px;
+top: 25px;
+
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+//margin: 0px 30px;
+margin: 0px 0px;
+}
+#badge4{
+/* Badges/03. Heading/H6 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 3px 4px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 76.97%;
+bottom: 0%;
+
+/* Components/Bradcrumb fill */
+
+background: #E9ECEF;
+border-radius: 8px;
+}
+#Frame4{
+/* Frame 41 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 76.97%;
+bottom: 0%;
+
+}
+#innerFrame4{
+/* Frame 114 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 159px;
+height: 30px;
+left: 10px;
+top: 20px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#clock-icon{
+/* Icons/Clock */
+
+
+position: static;
+width: 30px;
+height: 30px;
+left: 0px;
+top: 10px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#total-text{
+/* Frame 39 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 130px;
+height: 30px;
+left: 45px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+#hour{
+/* 3 Hours */
+
+
+position: static;
+width: 70px;
+height: 20px;
+left: 306px;
+top: 25px;
+
+
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+#bottomFrame{
+    /* Frame 123 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 411px;
+height: 212px;
+left: calc(50% - 411px/2);
+bottom: 0px;
+
+}
+#top-group{
+/* Group 59 */
+
+
+position: static;
+width: 370px;
+height: 75px;
+left: 20.5px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 20px 0px;
+}
+#bottom-group{
+/* Group 60 */
+
+
+position: static;
+width: 411px;
+height: 117px;
+left: 0px;
+top: 95px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 20px 0px;
+}
+#pay-text{
+    /* Payment Details */
+
+
+position: absolute;
+width: 130px;
+height: 29px;
+left: 20.5px;
+top: 0px;
+
+/* or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+}
+#inner-group{
+/* Group 61 */
+
+
+position: absolute;
+width: 370px;
+height: 46px;
+left: 20.5px;
+top: 29px;
+
+}
+#rect{
+/* Rectangle 132 */
+
+
+position: absolute;
+width: 370px;
+height: 46px;
+left: 20.5px;
+top: 29px;
+
+/* Components/Bradcrumb fill */
+
+background: #E9ECEF;
+border-radius: 10px;
+}
+#inner-frame{
+    /* Frame 92 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+position: absolute;
+width: 370px;
+height: 46px;
+left: calc(50% - 370px/2);
+top: calc(50% - 46px/2 - 54px);
+}
+#wallet-icon{
+    /* Icons/Phone landscape */
+
+
+position: static;
+left: 2.97%;
+right: 83.51%;
+top: -4.35%;
+bottom: -4.35%;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#money{
+/* XXXX */
+
+
+position: static;
+width: 197px;
+height: 27px;
+left: 71px;
+top: 9.5px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+display: flex;
+align-items: center;
+text-align: center;
+}
+@media only screen and (max-width: 410px) {
     #barText {
         width: calc(100vw);
         left: 0px;
     }
-    #bodyFrame, #Frame1,.badge,.Group{
+    #bodyFrame, #Frame1,#badge1,.Group{
         width: calc(100vw);
         left: 0px;
         //margin: 0px 10px;
