@@ -43,11 +43,15 @@ const routes: Routes = [
         path: 'account/edit-account', 
         component: EditAccountComponent,
       },
-      { 
-        path: 'home/pay-now', 
-        component: PayNowComponent,
-      },
+      // { 
+      //   path: 'home/pay-now', 
+      //   component: PayNowComponent,
+      // },
     ]
+  },
+  {
+    path: 'home/pay-now', 
+    component: PayNowComponent
   }
 ] 
 

@@ -704,21 +704,47 @@ flex-grow: 0;
 margin: 0px 10px;
 }
 #total-text{
-/* Frame 39 */
+// /* Frame 39 */
 
 
-/* Auto Layout */
+// /* Auto Layout */
 
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// padding: 0px;
+
+// position: static;
+// width: 130px;
+// height: 30px;
+// left: 45px;
+// top: 3px;
+
+
+// /* Inside Auto Layout */
+
+// flex: none;
+// order: 1;
+// flex-grow: 0;
+// margin: 0px 0px;
+/* Time entered */
+
 
 position: static;
-width: 130px;
-height: 30px;
+width: 150px;
+height: 24px;
 left: 45px;
-top: 0px;
+top: 3px;
+
+
+/* identical to box height, or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
 
 
 /* Inside Auto Layout */
@@ -778,7 +804,7 @@ bottom: 0px;
 position: static;
 width: 370px;
 height: 75px;
-left: 20.5px;
+left: 20px;
 top: 0px;
 
 
@@ -814,7 +840,7 @@ margin: 20px 0px;
 position: absolute;
 width: 130px;
 height: 29px;
-left: 20.5px;
+left: 20.27px;
 top: 0px;
 
 /* or 120% */
@@ -824,7 +850,7 @@ align-items: center;
 text-align: center;
 
 color: #000000;
-
+margin: 0px 10px;
 }
 #inner-group{
 /* Group 61 */
@@ -833,7 +859,7 @@ color: #000000;
 position: absolute;
 width: 370px;
 height: 46px;
-left: 20.5px;
+//left: 20.5px;
 top: 29px;
 
 }
@@ -844,8 +870,8 @@ top: 29px;
 position: absolute;
 width: 370px;
 height: 46px;
-left: 20.5px;
-top: 29px;
+//left: 20.5px;
+// top: 29px;
 
 /* Components/Bradcrumb fill */
 
@@ -868,32 +894,29 @@ position: absolute;
 width: 370px;
 height: 46px;
 left: calc(50% - 370px/2);
-top: calc(50% - 46px/2 - 54px);
+//top: calc(50% - 46px/2 - 54px);
 }
 #wallet-icon{
-    /* Icons/Phone landscape */
-
-
-position: static;
-left: 2.97%;
-right: 83.51%;
-top: -4.35%;
-bottom: -4.35%;
-
-
-/* Inside Auto Layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 10px;
+    position: static;
+    width: 35px;
+    height: 35px;
+    left: 18.5px;
+    top: 5.5px;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
 }
 #money{
 /* XXXX */
 
 
 position: static;
-width: 197px;
+width: 100px;
 height: 27px;
 left: 71px;
 top: 9.5px;
@@ -908,14 +931,234 @@ display: flex;
 align-items: center;
 text-align: center;
 }
+#line{
+    /* Line 21 */
+
+position: static;
+left: 75.14%;
+right: 15.41%;
+top: 11.96%;
+bottom: 88.04%;
+
+// border: 1px solid #000000;
+// transform: rotate(90deg);
+
+/* Inside Auto Layout */
+width: 5px;
+flex: none;
+order: 2;
+flex-grow: 0;
+//margin: 0px 10px;
+margin-right: 10px;
+margin-left: 45px;
+}
+#edit-text{
+    /* Edit */
+
+
+position: static;
+width: 71px;
+height: 29px;
+left: 288px;
+top: 8.5px;
+
+/* or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 0px 10px;
+}
+#rect2{
+    /* Rectangle 130 */
+
+
+position: absolute;
+width: 411px;
+height: 117px;
+left: 0px;
+top: 95px;
+
+/* Components/Card border */
+
+background: #DFDFDF;
+border-radius: 8px 8px 0px 0px;
+}
+#fee-frame{
+/* Frame 62 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 374px;
+height: 86px;
+left: 18.5px;
+top: 108px;
+
+}
+#total-frame{
+/* Frame 90 */
+
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+
+position: static;
+width: 374px;
+height: 30px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+}
+#t-text{
+ /* Total */
+
+
+position: static;
+width: 66px;
+height: 29px;
+left: 0px;
+top: 0px;
+
+
+/* or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/01. Primary */
+
+color: #11212E;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+//margin: 0px 0px;
+//margin-right: 210px;
+}
+#amount-text{
+    /* THB 45 */
+
+
+position: static;
+width: 98px;
+height: 30px;
+left: 276px;
+//right: 0px;
+top: 0px;
+
+/* or 120% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Global/01. Primary */
+
+color: #11212E;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+.btn btn-primary btn-lg btn-block{
+    /* Buttons/Filled/03. Large/01. Primary */
+
+
+/* Auto Layout */
+
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+// padding: 8px 16px;
+
+// position: static;
+// width: 371px;
+// height: 46px;
+// left: 0px;
+// top: 40px;
+
+// /* Global/01. Primary */
+
+ background: #11212E;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// border-radius: 4.8px;
+
+/* Inside Auto Layout */
+
+// flex: none;
+// order: 1;
+// flex-grow: 0;
+// margin: 10px 0px;
+}
 @media only screen and (max-width: 410px) {
-    #barText {
+    #barText, #bottomFrame, #rect2,#bodyFrame, #Frame1,#badge1,.Group {
         width: calc(100vw);
         left: 0px;
     }
-    #bodyFrame, #Frame1,#badge1,.Group{
+    #rect,#top-group,#inner-group,#inner-frame,#bottom-group,#fee-frame{
         width: calc(100vw);
         left: 0px;
+        //left: 0px;
         //margin: 0px 10px;
+    }
+    .btn btn-primary btn-lg btn-block{
+        width: calc(100vw-37px);
+        //left: 18.5;
+    }
+    #amount-text{
+        //margin-right: 20px;
+        right: 0px;
+        //margin-left: 0px;
+
+    }
+    #t-text{
+
+    }
+    #total-frame{
+        width: calc(100vw);
+        padding: 10px;
+        //left: 0px;
+        //margin: 10px 18.5px;
+
+    }
+    #pay-text{
+        left: auto;
     }
 }
