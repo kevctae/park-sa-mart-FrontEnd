@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.statusService.getAvailableSpace().subscribe(spaces => {
           this.spaces = spaces;
         });
-      })
+      });
   }
 
   startTimer(startDate: Date) {
