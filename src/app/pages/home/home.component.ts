@@ -1,4 +1,5 @@
 import { Component, ComponentFactoryResolver, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Account } from 'src/app/core/models/account.model';
@@ -25,7 +26,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     private accountService: AccountService,
     private statusService: StatusService,
     private authService: AuthService,
-    ) { }
+    private router: Router,
+  ) { }
   
 
   ngOnInit(): void {
@@ -58,7 +60,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         };
         this.startTimer(new Date(session.entry_datetime));
       }, error => {
-        console.log(error)
         this.statusService.getAvailableSpace().subscribe(spaces => {
           this.spaces = spaces;
         });
@@ -70,6 +71,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       
       this.counter = (new Date()).getTime() - startDate.getTime();
     }, 1000);
+  }
+
+  routePayNow() {
+    this.router.navigate(['/home/pay-now'], {skipLocationChange: true});
   }
 
   ngOnDestroy() {

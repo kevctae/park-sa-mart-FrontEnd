@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pay-now',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PayNowComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  routeHome() {
+    this.router.navigate(['/home'], {skipLocationChange: true});
   }
 
 }
