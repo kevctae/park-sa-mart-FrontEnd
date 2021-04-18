@@ -2,7 +2,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { AuthService } from 'src/app/auth/auth.service';
 import { Account } from '../models/account.model'
 
 export interface AccountResponseData {
@@ -22,7 +21,8 @@ export class AccountService {
   account = new BehaviorSubject<Account | null>(null);
 
   constructor(
-    private http: HttpClient,) { }
+    private http: HttpClient,
+  ) { }
 
   getAccount(email: string, token: string) {
     return this.http.post<AccountResponseData>(
@@ -44,6 +44,20 @@ export class AccountService {
         );
       })
     );
+  }
+
+  payNow(email: string | null, token: string | null, parking_id: number | undefined) {
+    return this.http.post<{
+      payment_datetime: string,
+      amount: number,
+      method: string,
+    }>('http://somchai09.trueddns.com:43322/memberpaynow',
+      {
+        email: email,
+        token: token,
+        parking_id: parking_id,
+      }
+    ).pipe(catchError(this.handleError));
   }
 
   private handleAccount(
@@ -73,6 +87,12 @@ export class AccountService {
     switch (errorRes.error.message) {
       case 'INVALID_EMAIL':
         errorMessage = 'The email does not exist';
+        break;
+      case 'PARKING_FEE_IS_PAID':
+        errorMessage = 'The parking record with requested parking_id is already paid the usert';
+        break;
+      case 'WALLET_MONEY_NOT_SUFFICIENT':
+        errorMessage = 'The amount of money in the user’s wallet is not sufficient for the parking fee';
         break;
     }
     return throwError(errorMessage);

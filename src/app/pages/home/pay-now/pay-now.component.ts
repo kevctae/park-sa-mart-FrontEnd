@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Subscription, throwError } from 'rxjs';
 import { Session } from 'src/app/core/models/session.model';
 import { AccountService } from 'src/app/core/services/account.service';
 import { StatusService } from 'src/app/core/services/status.service';
@@ -72,7 +72,17 @@ export class PayNowComponent implements OnInit {
   }
   
   payFee() {
-    
+    if (!!this.authService.auth) {
+      return this.accountService.payNow(
+        this.authService.auth.email, 
+        this.authService.auth.token, 
+        this.session?.parking_id
+      ).subscribe(() => {
+        this.router.navigate(['/home'], {skipLocationChange: true});
+      })
+    } else {
+      return throwError('Not authenticated');
+    }
   }
 
   routeHome() {
