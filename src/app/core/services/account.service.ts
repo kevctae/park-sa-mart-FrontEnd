@@ -7,7 +7,7 @@ import { Account } from '../models/account.model'
 export interface AccountResponseData {
   fname: string;
   lname: string;
-  wallet?: string;
+  wallet?: number;
   primary_card_no?: string;
   main_payment_method?: string;
   token: string;
@@ -51,6 +51,7 @@ export class AccountService {
       payment_datetime: string,
       amount: number,
       method: string,
+      wallet: number,
     }>('http://somchai09.trueddns.com:43322/memberpaynow',
       {
         email: email,
@@ -60,11 +61,26 @@ export class AccountService {
     ).pipe(catchError(this.handleError));
   }
 
-  private handleAccount(
+  topUp(email: string | null, token: string | null, money_to_add: number | undefined) {
+    return this.http.post<{
+      email: string,
+      wallet: number,
+      token: string,
+      expiresIn: string,
+    }>('http://somchai09.trueddns.com:43322/topupwallet',
+      {
+        email: email,
+        token: token,
+        money_to_add: money_to_add,
+      }
+    ).pipe(catchError(this.handleError));
+  }
+
+  handleAccount(
     fname: string, 
     lname: string,
     email: string,
-    wallet: string | undefined,
+    wallet: number | undefined,
     primary_card_no: string | undefined,
     main_payment_method: string | undefined) {
     const new_account: Account = {
@@ -93,6 +109,9 @@ export class AccountService {
         break;
       case 'WALLET_MONEY_NOT_SUFFICIENT':
         errorMessage = 'The amount of money in the user’s wallet is not sufficient for the parking fee';
+        break;
+      case 'MONEY_SHOULD_ONLY_CONTAIN_NUMBER':
+        errorMessage = 'The money_to_add field in the request payload should contain only number';
         break;
     }
     return throwError(errorMessage);

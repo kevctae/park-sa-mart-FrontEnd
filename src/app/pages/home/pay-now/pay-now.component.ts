@@ -6,6 +6,7 @@ import { AccountService } from 'src/app/core/services/account.service';
 import { StatusService } from 'src/app/core/services/status.service';
 import { Account } from 'src/app/core/models/account.model';
 import { AuthService } from 'src/app/auth/auth.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pay-now',
@@ -77,7 +78,18 @@ export class PayNowComponent implements OnInit {
         this.authService.auth.email, 
         this.authService.auth.token, 
         this.session?.parking_id
-      ).subscribe(() => {
+      ).subscribe(data => {
+        this.accountService.account.pipe(take(1)).subscribe(account => {
+          if (!!account) {
+            this.accountService.handleAccount(
+              account.fname, 
+              account.lname, 
+              account.email, 
+              data.wallet, 
+              account.primary_card_no, 
+              account.main_payment_method);
+          }
+        });
         this.router.navigate(['/home'], {skipLocationChange: true});
       })
     } else {

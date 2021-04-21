@@ -32,6 +32,10 @@ export class TopUpComponent implements OnInit, OnDestroy {
     this.router.navigate(['/wallet'], {skipLocationChange: true});
   }
 
+  routeAmount() {
+    this.router.navigate(['/wallet/top-up/amount'], {skipLocationChange: true});
+  }
+
   ngOnDestroy() {
     this.account$.unsubscribe();
   }
