@@ -8,6 +8,8 @@ import { HomeComponent } from "./home/home.component";
 import { AmountComponent } from "./wallet/top-up/amount/amount.component";
 import { TopUpComponent } from "./wallet/top-up/top-up.component";
 import { WalletComponent } from "./wallet/wallet.component";
+import { PayNowComponent } from './home/pay-now/pay-now.component';
+
 
 const routes: Routes = [
   {
@@ -46,7 +48,15 @@ const routes: Routes = [
         path: 'account/edit-account', 
         component: EditAccountComponent,
       },
+      // { 
+      //   path: 'home/pay-now', 
+      //   component: PayNowComponent,
+      // },
     ]
+  },
+  {
+    path: 'home/pay-now', 
+    component: PayNowComponent
   }
 ] 
 
