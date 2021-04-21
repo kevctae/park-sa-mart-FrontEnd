@@ -36,7 +36,6 @@ export class WalletComponent implements OnInit {
   initializeRecent() {
     this.statusService.getRecentParkingSession().pipe(take(1))
       .subscribe(pastSessions => {
-        console.log(pastSessions);
         this.pastSessions = pastSessions;
       });
   }

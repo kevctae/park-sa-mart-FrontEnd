@@ -7,20 +7,19 @@ import { Car } from '../models/car.model';
 import { Space } from '../models/space.model';
 
 export interface PastSession {
-  email: string,
-  token: string,
-  expiresIn: string,
-  parking_id: number,
-  entry_datetime: string,
-  building: string,
-  floor: string,
-  parking_platenum: string,
-  parking_platecity: string,
-  entry_picture: string,
-  brand: string,
-  model: string,
-  parking_cost: string,
-  payment_status: boolean,
+  parking_id: string;
+  entry_picture: string;
+  exit_picture: string;
+  parking_platenum: string;
+  parking_platecity: string;
+  entry_datetime: string;
+  exit_datetime: string;
+  building: string;
+  floor: string;
+  invoice_id: string;
+  amount: number;
+  method: string;
+  payment_datetime: string;
 }
 
 @Injectable({

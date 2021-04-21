@@ -53,7 +53,7 @@
     </div>
   </div>
 </div>
-<div id="activity">
+<div id="activity" *ngIf="pastSessions">
   <div id="frame">
     <div id="title">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,31 +64,35 @@
       </div>  
     </div>
 
-    <div id="topFrameOne">
-      <div id="dateOne">
-        <p style="margin: auto;">28 Dec 21</p>
+    <ng-container *ngFor="let pastSession of pastSessions; let i = index">
+      <div id="topFrameOne" [style.top.px]="72 * i + 54">
+        <div id="dateOne">
+          <p style="margin: auto;">{{pastSession.payment_datetime | date:'d MMM yy'}}</p>
+        </div>
+        <div id="timeOne">
+          <p style="margin: auto;">
+            {{pastSession.entry_datetime | date:'hh:mm'}} - {{pastSession.exit_datetime | date:'hh:mm'}}
+          </p>
+        </div>
+        <div id="costOne">
+          <b style="margin: auto;">{{pastSession.amount}} ฿</b>
+        </div>
       </div>
-      <div id="timeOne">
-        <p style="margin: auto;">08:41 - 12:22</p>
+      <div id="bottomFrameOne" [style.top.px]="72 * i + 88">
+        <div id="licenseOne">
+          <p style="margin: auto;">{{pastSession.parking_platenum}}</p>
+        </div>
+        <div id="buildingOne">
+          <p style="margin: auto;">PS {{pastSession.floor}}th Flr.</p>
+        </div>
+        <div id="methodOne">
+          <i style="margin: auto;">Wallet</i>
+        </div>
       </div>
-      <div id="costOne">
-        <b style="margin: auto;">200 ฿</b>
-      </div>
-    </div>
-    <div id="bottomFrameOne">
-      <div id="licenseOne">
-        <p style="margin: auto;">1งง 1111 </p>
-      </div>
-      <div id="buildingOne">
-        <p style="margin: auto;">PS 6th Flr.</p>
-      </div>
-      <div id="methodOne">
-        <i style="margin: auto;">Wallet</i>
-      </div>
-    </div>
-    <div id="lineOne"></div>
+      <div id="lineOne" [style.top.px]="68 * i + 50"></div>
+    </ng-container>
 
-    <div id="topFrameOne" style="top: 122px">
+    <!-- <div id="topFrameOne" style="top: 122px">
       <div id="dateOne">
         <p style="margin: auto;">28 Dec 21</p>
       </div>
@@ -110,7 +114,7 @@
         <i style="margin: auto;">Wallet</i>
       </div>
     </div>
-    <div id="lineOne" style="top: 118px"></div>
+    <div id="lineOne" style="top: 118px"></div> -->
     <!-- <div id="groupTwo">
       <div id="topFrameTwo">
         <div id="dateTwo">
