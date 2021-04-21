@@ -6,6 +6,22 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { Car } from '../models/car.model';
 import { Space } from '../models/space.model';
 
+export interface PastSession {
+  parking_id: string;
+  entry_picture: string;
+  exit_picture: string;
+  parking_platenum: string;
+  parking_platecity: string;
+  entry_datetime: string;
+  exit_datetime: string;
+  building: string;
+  floor: string;
+  invoice_id: string;
+  amount: number;
+  method: string;
+  payment_datetime: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -53,6 +69,22 @@ export class StatusService {
     ).pipe(
       catchError(this.handleError),
     )
+  }
+
+  getRecentParkingSession() {
+    if (!!this.authService.auth) {
+      return this.http.post<PastSession[]>(
+        'http://somchai09.trueddns.com:43322/recentparkingsessions',
+        {
+            email: this.authService.auth.email,
+            token: this.authService.auth.token,
+        }
+    ).pipe(
+        catchError(this.handleError),
+    );
+    } else {
+      return throwError('Not authenticated');
+    }
   }
 
   private handleError(errorRes: HttpErrorResponse) {
