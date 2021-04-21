@@ -88,7 +88,7 @@ export class AuthService {
 
     if (loadedAuth.token) {
       this.loadData(loadedAuth.email, loadedAuth.token);
-
+      this.router.navigate(['/home'], {skipLocationChange: true});
       this.auth$.next(loadedAuth);
       const expirationDuration =
       new Date(authData._tokenExpirationDate).getTime() -
