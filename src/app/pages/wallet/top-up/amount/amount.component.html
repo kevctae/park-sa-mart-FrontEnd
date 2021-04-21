@@ -1,6 +1,6 @@
 <div id="bar">
   <div id="bar-group">
-    <div id="bar-text">
+    <div id="bar-text" (click)="routeTopUp()">
       <h5 style="margin: auto;">Top Up</h5>
     </div>
     <div id="arrow">
@@ -18,19 +18,19 @@
         <div class="form-group">
           <label for="top-up-value">Select a top-up value (THB)</label>
           <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn-200" style="color:#FFFFFF;">200</button>
-          <button type="button" class="btn-400" style="color:#FFFFFF;">400</button>
-          <button type="button" class="btn-600" style="color:#FFFFFF;">600</button>
+          <button type="button" class="btn-200" style="color:#FFFFFF;" (click)="setAmount(200)">200</button>
+          <button type="button" class="btn-400" style="color:#FFFFFF;" (click)="setAmount(400)">400</button>
+          <button type="button" class="btn-600" style="color:#FFFFFF;" (click)="setAmount(600)">600</button>
           </div>
-          <input type="text" class="form-control" id="form-input"  placeholder="Place number">
+          <input type="text" class="form-control" id="form-input"  placeholder="Input Amount" [value]="amount">
         </div>
       </form>
     </div>
   </div>
   <div id="bottom-frame">
-    <div id="inner-botton-frame"> 
+    <div id="inner-bottom-frame"> 
       <div id="payment-text">
-        <h5 style="margin: auto;">Payment method</h5>
+        <h5 style="margin: auto; display: block;">Payment method</h5>
       </div>
       <div id="method-frame"> 
         <div id="inner-method-frame"> 
@@ -53,4 +53,4 @@
     </div>
   </div>
 </div>
-<button type="button" class="top-up-btn">Top Up</button>
+<button type="button" class="top-up-btn" style="color: white;" (click)="topUp()">Top Up</button>

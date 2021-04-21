@@ -2,7 +2,7 @@ export interface Account {
   fname: string;
   lname: string;
   email: string;
-  wallet?: string;
+  wallet?: number;
   primary_card_no?: string;
   main_payment_method?: string;
 }
