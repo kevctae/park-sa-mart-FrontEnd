@@ -1,5 +1,5 @@
 export interface Session {
-  parking_id: string,
+  parking_id: number,
   entry_datetime: string,
   building: string,
   floor: string,

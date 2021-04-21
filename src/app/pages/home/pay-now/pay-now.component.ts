@@ -1,26 +1,26 @@
-import { Component, ComponentFactoryResolver, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { AuthService } from 'src/app/auth/auth.service';
-import { Account } from 'src/app/core/models/account.model';
+import { Subscription, throwError } from 'rxjs';
 import { Session } from 'src/app/core/models/session.model';
-import { Space } from 'src/app/core/models/space.model';
 import { AccountService } from 'src/app/core/services/account.service';
 import { StatusService } from 'src/app/core/services/status.service';
+import { Account } from 'src/app/core/models/account.model';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-pay-now',
+  templateUrl: './pay-now.component.html',
+  styleUrls: ['./pay-now.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class PayNowComponent implements OnInit {
   account: Account | null = null;
   account$: Subscription = new Subscription;
   session: Session | null = null;
   session$: Subscription = new Subscription;
-  spaces: Space[] | null = null;
-  space$: Subscription = new Subscription;
   counter: any | null = null;
   timerRef: any;
+  currentTime: number | undefined;
+  timeDiff: number | undefined;
 
   constructor(
     private accountService: AccountService,
@@ -28,11 +28,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private router: Router,
   ) { }
-  
 
   ngOnInit(): void {
     this.initializeAccount();
     this.initializeStatus();
+    this.currentTime = Date.now();
+    
   }
 
   initializeAccount() {
@@ -59,10 +60,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           payment_status: session.payment_status,
         };
         this.startTimer(new Date(session.entry_datetime));
-      }, error => {
-        this.statusService.getAvailableSpace().subscribe(spaces => {
-          this.spaces = spaces;
-        });
+        this.timeDiff = Date.now() - new Date(session.entry_datetime).getTime();
       });
   }
 
@@ -72,15 +70,23 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.counter = (new Date()).getTime() - startDate.getTime();
     }, 1000);
   }
-
-  routePayNow() {
-    this.router.navigate(['/home/pay-now'], {skipLocationChange: true});
+  
+  payFee() {
+    if (!!this.authService.auth) {
+      return this.accountService.payNow(
+        this.authService.auth.email, 
+        this.authService.auth.token, 
+        this.session?.parking_id
+      ).subscribe(() => {
+        this.router.navigate(['/home'], {skipLocationChange: true});
+      })
+    } else {
+      return throwError('Not authenticated');
+    }
   }
 
-  ngOnDestroy() {
-    this.account$.unsubscribe();
-    this.session$.unsubscribe();
-    this.space$.unsubscribe();
-    clearInterval(this.timerRef);
+  routeHome() {
+    this.router.navigate(['/home'], {skipLocationChange: true});
   }
+
 }

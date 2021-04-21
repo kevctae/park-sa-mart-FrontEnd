@@ -9,6 +9,7 @@ import { TopUpComponent } from './wallet/top-up/top-up.component';
 import { EditCarComponent } from './account/edit-car/edit-car.component';
 import { FormsModule } from '@angular/forms';
 import { EditAccountComponent } from './account/edit-account/edit-account.component';
+import { PayNowComponent } from './home/pay-now/pay-now.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { EditAccountComponent } from './account/edit-account/edit-account.compon
     TopUpComponent,
     EditCarComponent,
     EditAccountComponent,
+    PayNowComponent,
   ],
   imports: [
     CommonModule,
