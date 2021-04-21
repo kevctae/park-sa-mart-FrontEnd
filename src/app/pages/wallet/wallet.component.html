@@ -5,13 +5,10 @@
     </div>
     <div id= "mid-frame">
       <div id="money" *ngIf="account">
-        <h1 style="margin: auto;">{{account.wallet}}</h1>
+        <h1 style="margin: auto;">{{account.wallet}}</h1><h4 style="margin: auto;">THB</h4>
       </div>
       <div id="money" *ngIf="!account">
         <h1 style="margin: auto;">--</h1>
-      </div>
-      <div id="unit" style="top: -50px;">
-        <h4 style="margin: auto;">THB</h4>
       </div>
     </div>
     <div id="menu">
