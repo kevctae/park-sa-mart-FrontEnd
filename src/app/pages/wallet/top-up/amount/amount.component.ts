@@ -13,7 +13,6 @@ import { Account } from '../../../../core/models/account.model'
 })
 export class AmountComponent implements OnInit {
   amount: number = 0;
-  account$: Subscription = new Subscription;
 
   constructor(
     private authService: AuthService,
@@ -39,19 +38,15 @@ export class AmountComponent implements OnInit {
         this.amount,
       ).subscribe(data => {
         this.authService.handleAuthentication(data.email, data.token, +data.expiresIn);
-        this.account$ = this.accountService.account.pipe(take(1)).subscribe(account => {
+        this.accountService.account.pipe(take(1)).subscribe(account => {
           if (!!account) {
-            const new_wallet: Account = {
-              fname: account.fname,
-              lname: account.lname,
-              email: account.email,
-              wallet: data.wallet,
-              primary_card_no: account.primary_card_no,
-              main_payment_method: account.main_payment_method,
-            }
-            this.accountService.handleAccount(new_wallet.fname, new_wallet.lname, new_wallet.email, new_wallet.wallet, new_wallet.primary_card_no, new_wallet.main_payment_method);
-            this.account$.unsubscribe();
-            return;
+            this.accountService.handleAccount(
+              account.fname, 
+              account.lname, 
+              account.email, 
+              data.wallet, 
+              account.primary_card_no, 
+              account.main_payment_method);
           }
         });
         this.router.navigate(['/wallet/top-up'], {skipLocationChange: true});

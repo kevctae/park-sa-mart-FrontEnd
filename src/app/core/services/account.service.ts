@@ -51,6 +51,7 @@ export class AccountService {
       payment_datetime: string,
       amount: number,
       method: string,
+      wallet: number,
     }>('http://somchai09.trueddns.com:43322/memberpaynow',
       {
         email: email,
