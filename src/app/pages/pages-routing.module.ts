@@ -10,7 +10,6 @@ import { TopUpComponent } from "./wallet/top-up/top-up.component";
 import { WalletComponent } from "./wallet/wallet.component";
 import { PayNowComponent } from './home/pay-now/pay-now.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -27,6 +26,10 @@ const routes: Routes = [
       { 
         path: 'account', 
         component: AccountComponent
+      },
+      {
+        path: 'home/pay-now', 
+        component: PayNowComponent
       },
       { 
         path: 'wallet/top-up', 
@@ -50,10 +53,7 @@ const routes: Routes = [
       // },
     ]
   },
-  {
-    path: 'home/pay-now', 
-    component: PayNowComponent
-  }
+
 ] 
 
 @NgModule({
