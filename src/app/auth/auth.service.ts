@@ -44,6 +44,8 @@ export class AuthService {
               resData.token,
               +resData.expiresIn
             );
+
+            this.loadData(resData.email, resData.token);
         })
     );
   }
