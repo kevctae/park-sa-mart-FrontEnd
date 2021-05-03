@@ -119,7 +119,7 @@ export class AuthComponent implements OnInit, AfterViewInit {
   }
 
   goToUrl(): void {
-    document.location.href = 'https://youtu.be/LMSy7F1qCCg';
+    document.location.href = 'https://youtu.be/yGUZIyJlKTs';
   }
 
   private getDismissReason(reason: any): string {
